@@ -27,7 +27,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Masyarakat Bersuara | Verifikasi</title>
+    <title>Forgot Password Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
 
     <meta name="description" content="" />
 
@@ -135,8 +135,8 @@
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Verifikasi</h4>
-              <p class="mb-4">Enter your email and we'll send you a OTP code</p>
+              <h4 class="mb-2">Forgot Password? 🔒</h4>
+              <p class="mb-4">Enter your email and we'll send you instructions to reset your password</p>
               <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
@@ -149,10 +149,10 @@
                     autofocus
                   />
                 </div>
-                <button class="btn btn-primary d-grid w-100">Send</button>
+                <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
               </form>
               <div class="text-center">
-                <a href="/home" class="d-flex align-items-center justify-content-center">
+                <a href="auth-login-basic.html" class="d-flex align-items-center justify-content-center">
                   <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
                   Back to login
                 </a>
@@ -163,6 +163,8 @@
         </div>
       </div>
     </div>
+
+    <!-- / Content -->
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
