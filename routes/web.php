@@ -53,6 +53,6 @@ Route::get('/user', function () {
     return view('user');
 });
 
-Route::get('/Verifikasi', function () {
+Route::get('/verifikasi', function () {
     return view('verifikasi');
 });
