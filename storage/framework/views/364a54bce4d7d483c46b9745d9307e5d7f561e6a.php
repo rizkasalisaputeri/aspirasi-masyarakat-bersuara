@@ -119,7 +119,7 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Save Password</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="/user" button type="submit" class="btn btn-primary">Submit</button></a>
                     </form>
                 </div>
             </div>
