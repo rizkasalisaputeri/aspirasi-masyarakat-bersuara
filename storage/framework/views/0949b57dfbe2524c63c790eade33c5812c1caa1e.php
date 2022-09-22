@@ -29,7 +29,7 @@
         <li class="nav-item">
           <a class="nav-link" href="index.html">
             <i class="mdi mdi-view-quilt menu-icon"></i>
-            <span class="menu-title">Dashboard</span>
+            <span class="menu-title">dashboard</span>
             <div class="badge badge-info badge-pill">2</div>
           </a>
         </li>
@@ -40,7 +40,7 @@
         <li class="nav-item">
           <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
             <i class="mdi mdi-palette menu-icon"></i>
-            <span class="menu-title">UI Elements</span>
+            <span class="menu-title">Buat Laporan</span>
             <i class="menu-arrow"></i>
           </a>
           <div class="collapse" id="ui-basic">
@@ -53,7 +53,7 @@
         <li class="nav-item">
           <a class="nav-link" href="pages/forms/basic_elements.html">
             <i class="mdi mdi-view-headline menu-icon"></i>
-            <span class="menu-title">Form elements</span>
+            <span class="menu-title">Laporan Saya</span>
           </a>
         </li>
         <li class="nav-item">
