@@ -67,7 +67,7 @@
                             <a href="signup.html" class="dropdown-item">Laporan Anggaran</a>
                         </div>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>History</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting</a>
                     <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
                     </div>
@@ -160,9 +160,9 @@
                             <span class="d-none d-lg-inline-flex">John Doe</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a href="/biodata" class="dropdown-item">My Profile</a>
+                            <a href="/setting" class="dropdown-item">Settings</a>
+                            <a href="/home" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 </div>
