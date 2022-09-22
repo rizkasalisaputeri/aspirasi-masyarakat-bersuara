@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Spica Admin</title>
+  <title>Masyarakat Bersuara | Login</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -15,7 +15,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style2.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <!--<link rel="shortcut icon" href="images/favicon.png" />-->
 </head>
 <body>
   <div class="container-scroller d-flex">
@@ -29,12 +29,12 @@
         <li class="nav-item">
           <a class="nav-link" href="index.html">
             <i class="mdi mdi-view-quilt menu-icon"></i>
-            <span class="menu-title">dashboard</span>
+            <span class="menu-title">Dashboard</span>
             <div class="badge badge-info badge-pill">2</div>
           </a>
         </li>
         <li class="nav-item sidebar-category">
-          <p>Components</p>
+          <p>Menu Pilihan</p>
           <span></span>
         </li>
         <li class="nav-item">
@@ -102,11 +102,6 @@
           <a class="nav-link" href="docs/documentation.html">
             <i class="mdi mdi-file-document-box-outline menu-icon"></i>
             <span class="menu-title">Documentation</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="http://www.bootstrapdash.com/demo/spica/template/">
-            <button class="btn bg-danger btn-sm menu-title">Upgrade to pro</button>
           </a>
         </li>
       </ul>
@@ -651,9 +646,7 @@
           <div class="card">
             <div class="card-body">
               <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Distributed By: <a href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span>
-                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Masyarakat Bersuara 2022</span>
               </div>
             </div>
           </div>
