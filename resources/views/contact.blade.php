@@ -191,7 +191,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Alamat</h5>
-                            <h4 class="text-primary mb-0">123 Street, NY, USA</h4>
+                            <h4 class="text-primary mb-0">Jl. Yos Sudarso No.18 - 22, Kota Surabaya</h4>
                         </div>
                     </div>
                 </div>
