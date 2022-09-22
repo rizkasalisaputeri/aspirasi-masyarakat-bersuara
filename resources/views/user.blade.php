@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <title>Masyarakat Bersuara | Login</title>
   <!-- base:css -->
-  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+!
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
