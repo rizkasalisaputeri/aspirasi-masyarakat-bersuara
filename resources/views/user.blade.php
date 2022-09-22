@@ -4,9 +4,10 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <title>Masyarakat Bersuara | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Spica Admin</title>
   <!-- base:css -->
-!
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
@@ -14,7 +15,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style2.css">
   <!-- endinject -->
-  <!--<link rel="shortcut icon" href="images/favicon.png" />-->
+  <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
   <div class="container-scroller d-flex">
@@ -28,23 +29,23 @@
         <li class="nav-item">
           <a class="nav-link" href="index.html">
             <i class="mdi mdi-view-quilt menu-icon"></i>
-            <span class="menu-title">Dashboard</span>
+            <span class="menu-title">dashboard</span>
             <div class="badge badge-info badge-pill">2</div>
           </a>
         </li>
         <li class="nav-item sidebar-category">
-          <p>Menu Pilihan</p>
+          <p>Components</p>
           <span></span>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
             <i class="mdi mdi-palette menu-icon"></i>
-            <span class="menu-title">Buat Laporan</span>
+            <span class="menu-title">Laporan Proposal</span>
             <i class="menu-arrow"></i>
           </a>
           <div class="collapse" id="ui-basic">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="/laporan-proposal">Laporam proposal</a></li>
+              <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
               <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
             </ul>
           </div>
@@ -52,13 +53,13 @@
         <li class="nav-item">
           <a class="nav-link" href="pages/forms/basic_elements.html">
             <i class="mdi mdi-view-headline menu-icon"></i>
-            <span class="menu-title">Laporan Saya</span>
+            <span class="menu-title">Laporan Anggaran</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="pages/charts/chartjs.html">
             <i class="mdi mdi-chart-pie menu-icon"></i>
-            <span class="menu-title">Charts</span>
+            <span class="menu-title">Laporan Saya</span>
           </a>
         </li>
         <li class="nav-item">
@@ -101,6 +102,11 @@
           <a class="nav-link" href="docs/documentation.html">
             <i class="mdi mdi-file-document-box-outline menu-icon"></i>
             <span class="menu-title">Documentation</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://www.bootstrapdash.com/demo/spica/template/">
+            <button class="btn bg-danger btn-sm menu-title">Upgrade to pro</button>
           </a>
         </li>
       </ul>
@@ -645,7 +651,9 @@
           <div class="card">
             <div class="card-body">
               <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Masyarakat Bersuara 2022</span>
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Distributed By: <a href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
               </div>
             </div>
           </div>
