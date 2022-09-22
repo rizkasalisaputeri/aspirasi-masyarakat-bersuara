@@ -122,7 +122,7 @@
                         <a href="">Forgot Password</a>
                     </div>
                     <a href="/user" button type="submit" class="btn btn-primary">Submit</button></a>
-                    <p class="text-center mb-0">Don't have an Account? <a href="/registrasi">Sign Up</a></p>
+                    <p class="text-center mb-0">Belum punya akun? <a href="/registrasi">Registrasi</a></p>
                 </form>
             </div>
         </div>
