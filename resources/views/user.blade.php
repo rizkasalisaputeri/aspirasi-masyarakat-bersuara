@@ -44,7 +44,7 @@
           </a>
           <div class="collapse" id="ui-basic">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="/laporan-pr">Laporam pop</a></li>
+              <li class="nav-item"> <a class="nav-link" href="/laporan-pr">Laporam proposal</a></li>
               <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
             </ul>
           </div>
