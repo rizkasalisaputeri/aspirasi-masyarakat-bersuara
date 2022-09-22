@@ -27,7 +27,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Forgot Password Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Masyarakat Bersuara | Verifikasi Email</title>
 
     <meta name="description" content="" />
 
@@ -135,9 +135,8 @@
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Forgot Password? 🔒</h4>
-              <p class="mb-4">Enter your email and we'll send you instructions to reset your password</p>
-              <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+              <p class="mb-4">Masukkan email anda dan kami akan mengirim link untuk validasi email</p>
+              <form id="formAuthentication" class="mb-3" action="" method="POST">
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
                   <input
@@ -152,9 +151,9 @@
                 <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
               </form>
               <div class="text-center">
-                <a href="auth-login-basic.html" class="d-flex align-items-center justify-content-center">
+                <a href="/regist" class="d-flex align-items-center justify-content-center">
                   <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
-                  Back to login
+                  Back to Registrasu
                 </a>
               </div>
             </div>
