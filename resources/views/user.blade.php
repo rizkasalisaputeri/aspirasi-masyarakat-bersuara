@@ -244,7 +244,7 @@
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Recent Salse</h6>
+                        <h6 class="mb-0">Laporan</h6>
                         <a href="">Show All</a>
                     </div>
                     <div class="table-responsive">
@@ -260,37 +260,37 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>01 Jan 2022</td>
+                                    <td>05 September 2022</td>
                                     <td>Laporan Proposal</td>
-                                    <td>Laporan pembangunan jembatan</td>
+                                    <td>aporan Pembangunan Bank Sampah Daerah Suterejo</td>
                                     <td>Sudah ditangani</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01 Jan 2022</td>
-                                    <td>Laporan Proposal</td>
-                                    <td>Laporan pembangunan jembatan</td>
+                                    <td>28 April 2022</td>
+                                    <td>Laporan Anggaran</td>
+                                    <td>Laporan Pengajuan Dana Kerusakan Bangunan Sekolah Dasar/td>
                                     <td>Sudah ditangani</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01 Jan 2022</td>
-                                    <td>Laporan Proposal</td>
-                                    <td>Laporan pembangunan jembatan</td>
+                                    <td>20 Februari 2021</td>
+                                    <td>Laporan Anggaran</td>
+                                    <td>Laporan Pengajuan Bantuan Dana untuk UMKM Terdampak Covid-19</td>
                                     <td>Sudah ditangani</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01 Jan 2022</td>
+                                    <td>14 Januari 2021</td>
                                     <td>Laporan Proposal</td>
-                                    <td>Laporan pembangunan jembatan</td>
+                                    <td>Laporan Perencanaan Pembangunan Toilet Umum</td>
                                     <td>Sudah ditangani</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
-                                    <td>01 Jan 2022</td>
+                                    <td>24 Desember 2020</td>
                                     <td>Laporan Proposal</td>
-                                    <td>Laporan pembangunan jembatan</td>
+                                    <td>Laporan Pembangunan Jembatan</td>
                                     <td>Sudah ditangani</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
