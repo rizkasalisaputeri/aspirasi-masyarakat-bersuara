@@ -64,7 +64,7 @@
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Input Laporan</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
-                            <a href="signup.html" class="dropdown-item">Laporan Anggaran</a>
+                            <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
                         </div>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>History</a>
                     <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting</a>

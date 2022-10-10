@@ -64,7 +64,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Input Laporan</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
-                            <a href="signup.html" class="dropdown-item">Laporan Anggaran</a>
+                            <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
                         </div>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>History</a>
                     <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting</a>
@@ -220,14 +220,14 @@
                             <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                         </tr>
                         <tr>
-                            <td>22 Desember 2020</td>
+                            <td>22 Mei 2020</td>
                             <td>Laporan Anggaran</td>
                             <td>Laporan Pengajuan Dana Pembangunan Perpustakaan Umum</td>
                             <td>Sudah ditangani</td>
                             <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                         </tr>
                         <tr>
-                            <td>20 Desember 2020</td>
+                            <td>20 April 2020</td>
                             <td>Laporan Anggaran</td>
                             <td>Laporan Pengajuan Dana Pembangunan Pujasera </td>
                             <td>Sudah ditangani</td>
