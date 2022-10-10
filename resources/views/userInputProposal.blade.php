@@ -208,7 +208,7 @@
                         <tr>
                             <td>28 April 2022</td>
                             <td>Laporan Anggaran</td>
-                            <td>Laporan Pengajuan Dana Kerusakan Bangunan Sekolah Dasar/td>
+                            <td>Laporan Pengajuan Dana Kerusakan Bangunan Sekolah Dasar</td>
                             <td>Sudah ditangani</td>
                             <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                         </tr>
