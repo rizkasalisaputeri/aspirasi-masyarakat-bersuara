@@ -49,8 +49,8 @@ Route::get('/login', function () {
 });
 
 
-Route::get('/user', function () {
-    return view('user');
+Route::get('/dashboardUser', function () {
+    return view('user/dashboardUser');
 });
 
 Route::get('/verifikasi', function () {
@@ -58,9 +58,13 @@ Route::get('/verifikasi', function () {
 });
 
 Route::get('/InputLaporanProposal', function () {
-    return view('userInputProposal');
+    return view('user/userInputProposal');
 });
 
 Route::get('/InputLaporanAnggaran', function () {
-    return view('userInputAnggaran');
+    return view('user/userInputAnggaran');
+});
+
+Route::get('/userHistory', function () {
+    return view('user/userHistory');
 });
