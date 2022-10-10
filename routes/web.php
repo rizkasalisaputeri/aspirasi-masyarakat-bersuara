@@ -68,3 +68,10 @@ Route::get('/InputLaporanAnggaran', function () {
 Route::get('/userHistory', function () {
     return view('user/userHistory');
 });
+
+Route::get('/User/LaporanSaya', function () {
+    return view('user/laporanSaya');
+});
+Route::get('/user', function () {
+    return view('user/dashboardUser');
+});

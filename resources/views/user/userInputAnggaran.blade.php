@@ -57,19 +57,19 @@
                         <h6 class="mb-0">Jhon Doe</h6>
                         <span>User</span>
                     </div>
-                </div>
-                <div class="navbar-nav w-100">
-                    <a href="dashboardUser" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Input Laporan</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
-                            <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
+                    <div class="navbar-nav w-100">
+                        <a href="/user" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Input Laporan</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
+                                <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
+                            </div>
+                        <a href="/User/LaporanSaya" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Laporan Saya</a>
+                        <a href="/userHistory" class="nav-item nav-link "><i class="fa fa-th me-2"></i>History</a>
+                        <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
                         </div>
-                    <a href="/userHistory" class="nav-item nav-link"><i class="fa fa-th me-2"></i>History</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting</a>
                     </div>
-                </div>
             </nav>
         </div>
         <!-- Sidebar End -->
@@ -166,76 +166,37 @@
                     </nav>
                     <!-- Navbar End -->
 
-    <div class="container-fluid pt-4 px-4">
-        <div class="bg-light text-center rounded p-4">
-            <div class="d-flex align-items-center justify-content-between mb-4">
-                <h6 class="mb-0">Laporan Anggaran</h6>
-                <div class="dropdown">
-                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                      <i class="far fa-file-alt me-2"></i>Edit</a>
-                    </button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="javascript:void(0);"
-                        ><i class="bx bx-edit-alt me-2"></i> Add</a
-                      >
-                      <a class="dropdown-item" href="javascript:void(0);"
-                        ><i class="bx bx-trash me-2"></i> Delete</a
-                      >
+                    <div class="col-sm-120 col-xl-60">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Laporan Anggaran</h6>
+                            <div class="form-floating mb-3">
+                                <input type="judul" class="form-control" id="floatingInput"
+                                    placeholder="judulLaporan">
+                                <label for="floatingInput">Judul Laporan</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here"
+                                    id="floatingTextarea" style="height: 150px;"></textarea>
+                                <label for="floatingTextarea">Rangkuman Isi Laporan</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="floatingSelect"
+                                    aria-label="Floating label select example">
+                                    <option selected>Pilih Lokasi</option>
+                                    <option value="1">Tambaksari</option>
+                                    <option value="2">Ngagel</option>
+                                    <option value="3">Jemusari</option>
+                                </select>
+                                <label for="floatingSelect">Lokasi Kejadian</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Upload Laporan</label>
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                  </div>
-            </div>
-            <div class="table-responsive">
-                <table class="table text-start align-middle table-bordered table-hover mb-0">
-                    <thead>
-                        <tr class="text-dark">
-                            <th scope="col">Date</th>
-                            <th scope="col">Jenis Laporan</th>
-                            <th scope="col">Judul Laporan</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>28 April 2022</td>
-                            <td>Laporan Anggaran</td>
-                            <td>Laporan Pengajuan Dana Kerusakan Bangunan Sekolah Dasar</td>
-                            <td>Sudah ditangani</td>
-                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>20 Februari 2021</td>
-                            <td>Laporan Anggaran</td>
-                            <td>Laporan Pengajuan Bantuan Dana untuk UMKM Terdampak Covid-19</td>
-                            <td>Sudah ditangani</td>
-                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>18 Januari 2021</td>
-                            <td>Laporan Anggaran</td>
-                            <td>Laporan Pengajuan Dana Penangananan Sungai Tambakwedi Tercemar</td>
-                            <td>Sudah ditangani</td>
-                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>22 Mei 2020</td>
-                            <td>Laporan Anggaran</td>
-                            <td>Laporan Pengajuan Dana Pembangunan Perpustakaan Umum</td>
-                            <td>Sudah ditangani</td>
-                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>20 April 2020</td>
-                            <td>Laporan Anggaran</td>
-                            <td>Laporan Pengajuan Dana Pembangunan Pujasera </td>
-                            <td>Sudah ditangani</td>
-                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+                    
+
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">

@@ -59,17 +59,18 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="dashboardUser" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/user" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Input Laporan</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
                             <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
                         </div>
+                    <a href="/User/LaporanSaya" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Laporan Saya</a>
                     <a href="/userHistory" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>History</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting</a>
-                 
+                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
                     </div>
+                </div>
                 </div>
             </nav>
         </div>
