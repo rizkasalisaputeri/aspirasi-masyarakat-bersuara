@@ -201,21 +201,7 @@
                         <tr>
                             <td>05 September 2022</td>
                             <td>Laporan Proposal</td>
-                            <td>aporan Pembangunan Bank Sampah Daerah Suterejo</td>
-                            <td>Sudah ditangani</td>
-                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>28 April 2022</td>
-                            <td>Laporan Anggaran</td>
-                            <td>Laporan Pengajuan Dana Kerusakan Bangunan Sekolah Dasar</td>
-                            <td>Sudah ditangani</td>
-                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>20 Februari 2021</td>
-                            <td>Laporan Anggaran</td>
-                            <td>Laporan Pengajuan Bantuan Dana untuk UMKM Terdampak Covid-19</td>
+                            <td>Laporan Pembangunan Bank Sampah Daerah Suterejo</td>
                             <td>Sudah ditangani</td>
                             <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                         </tr>
