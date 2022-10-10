@@ -56,3 +56,7 @@ Route::get('/user', function () {
 Route::get('/verifikasi', function () {
     return view('verifikasi');
 });
+
+Route::get('/InputLaporanProposal', function () {
+    return view('userInputProposal');
+});
