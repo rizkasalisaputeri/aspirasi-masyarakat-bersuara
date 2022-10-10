@@ -72,6 +72,11 @@ Route::get('/userHistory', function () {
 Route::get('/User/LaporanSaya', function () {
     return view('user/laporanSaya');
 });
+
 Route::get('/user', function () {
     return view('user/dashboardUser');
+});
+
+Route::get('/Admin/Dashboard', function () {
+    return view('admin/dashboardAdm');
 });
