@@ -76,6 +76,27 @@ Route::get('/user', function () {
     return view('user/dashboardUser');
 });
 
+<<<<<<< Updated upstream
 Route::get('/settingUser', function () {
     return view('user/settingUser');
+=======
+Route::get('/admin', function () {
+    return view('admin/dashboardAdm');
+});
+
+Route::get('/editUser', function () {
+    return view('admin/editUser');
+});
+
+Route::get('/editLaporan', function () {
+    return view('admin/editLaporan');
+});
+
+Route::get('/editLokasi', function () {
+    return view('admin/editLokasi');
+});
+
+Route::get('/editKategori', function () {
+    return view('admin/editKategori');
+>>>>>>> Stashed changes
 });

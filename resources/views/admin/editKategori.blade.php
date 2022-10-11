@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Admin | Dashboard</title>
+    <title>Admin | Edit Kategori</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -54,16 +54,16 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
-                        <span>Admin</span>
+                        <h6 class="mb-0">Chloe Kielhs</h6>
+                        <span>ADMIN</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="/admin" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/admin" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <a href="/editLaporan" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Edit Laporan</a>
                     <a href="/editUser" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Edit User</a>
                     <a href="/editLokasi" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Edit Lokasi</a>
-                    <a href="/editKategori" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Edit Kategori</a>
+                    <a href="/editKategori" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Edit Kategori</a>
                     </div>
                 </div>
             </nav>
@@ -98,138 +98,52 @@
                         </div>
                     </nav>
                     <!-- Navbar End -->
-            <!-- Sale & Revenue Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-line fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Today Report</p>
-                                <h6 class="mb-0">12</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Report</p>
-                                <h6 class="mb-0">12345</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Report</p>
-                                <h6 class="mb-0">12345</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Report</p>
-                                <h6 class="mb-0">12345</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sale & Revenue End -->
-
-
-            <!-- Sales Chart Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
+                    <div class="container-fluid pt-4 px-4">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Laporan masuk bulan ini</h6>
-                                <a href="">Show All</a>
+                                <h6 class="mb-0">Laporan Saya</h6>
                             </div>
-                            <canvas id="worldwide-sales"></canvas>
+                            <div class="table-responsive">
+                                <table class="table text-start align-middle table-bordered table-hover mb-0">
+                                    <thead>
+                                        <tr class="text-dark">
+                                            <th scope="col">ID Kategori</th>
+                                            <th scope="col">Nama Kategori</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1001</td>
+                                            <td>Kesehatan</td>
+                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1002</td>
+                                            <td>Politik</td>
+                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1003</td>
+                                            <td>Ekonomi</td>
+                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1004</td>
+                                            <td>Pendidikan</td>
+                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1005</td>
+                                            <td>Pariwisata</td>
+                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Total laporan tahun ini</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="salse-revenue"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sales Chart End -->
-
-
-            <!-- Recent Sales Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Laporan Saya</h6>
-                        <a href="/User/Laporan Saya">Show All</a>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-dark">
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Jenis Laporan</th>
-                                    <th scope="col">Judul Laporan</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>05 Mei 2022</td>
-                                    <td>Laporan Proposal</td>
-                                    <td>Laporan Pembangunan Bank Sampah Daerah Suterejo</td>
-                                    <td>Sudah ditangani</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td>28 Maret 2022</td>
-                                    <td>Laporan Anggaran</td>
-                                    <td>Laporan Pengajuan Dana Kerusakan Bangunan Sekolah Dasar</td>
-                                    <td>Sudah ditangani</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td>20 Februari 2021</td>
-                                    <td>Laporan Anggaran</td>
-                                    <td>Laporan Pengajuan Bantuan Dana untuk UMKM Terdampak Covid-19</td>
-                                    <td>Sudah ditangani</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td>14 Januari 2021</td>
-                                    <td>Laporan Proposal</td>
-                                    <td>Laporan Perencanaan Pembangunan Toilet Umum</td>
-                                    <td>Sudah ditangani</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td>24 Juni 2020</td>
-                                    <td>Laporan Proposal</td>
-                                    <td>Laporan Pembangunan Jembatan</td>
-                                    <td>Sudah ditangani</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!-- Recent Sales End -->
-
-            <!-- Footer Start -->
+                    <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
                     <div class="row">

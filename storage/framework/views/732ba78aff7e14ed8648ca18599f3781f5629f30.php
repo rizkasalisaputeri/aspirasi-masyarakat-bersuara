@@ -170,7 +170,7 @@
                               <input type="text" id="form3Examplev3" class="form-control form-control-lg" />
                               <label class="form-label" for="form3Examplev3">Nama Belakang</label>
                             </div>
-      
+
                           </div>
                         </div>
 
@@ -186,7 +186,15 @@
       
                             <div class="form-outline">
                               <input type="text" id="form3Examplev5" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplev5">NIP/NIK</label>
+                              <label class="form-label" for="form3Examplev5">Username</label>
+                            </div>
+      
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+      
+                            <div class="form-outline">
+                              <input type="text" id="form3Examplev5" class="form-control form-control-lg" />
+                              <label class="form-label" for="form3Examplev5">Password</label>
                             </div>
       
                           </div>
@@ -254,7 +262,7 @@
       
                             <div class="form-outline form-white">
                               <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplea8">Password</label>
+                              <label class="form-label" for="form3Examplea8">NIK</label>
                             </div>
       
                           </div>
