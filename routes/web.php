@@ -76,10 +76,12 @@ Route::get('/user', function () {
     return view('user/dashboardUser');
 });
 
-<<<<<<< Updated upstream
+
 Route::get('/settingUser', function () {
     return view('user/settingUser');
-=======
+
+});   
+ 
 Route::get('/admin', function () {
     return view('admin/dashboardAdm');
 });
@@ -98,5 +100,5 @@ Route::get('/editLokasi', function () {
 
 Route::get('/editKategori', function () {
     return view('admin/editKategori');
->>>>>>> Stashed changes
+
 });
