@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Masyarakat Bersuara | Laporan Saya</title>
+    <title>Masyarakat Bersuara | Login</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -57,19 +58,20 @@
                         <h6 class="mb-0">Jhon Doe</h6>
                         <span>User</span>
                     </div>
-                    <div class="navbar-nav w-100">
-                        <a href="/user" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Input Laporan</a>
-                            <div class="dropdown-menu bg-transparent border-0">
-                                <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
-                                <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
-                            </div>
-                        <a href="/User/LaporanSaya" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Laporan Saya</a>
-                        <a href="/userHistory" class="nav-item nav-link "><i class="fa fa-th me-2"></i>History</a>
-                        <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="/user" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Input Laporan</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
+                            <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
                         </div>
+                    <a href="/laporanSaya" class="nav-item nav-link active "><i class="fa fa-th me-2"></i>Laporan Saya</a>
+                    <a href="/userHistory" class="nav-item nav-link "><i class="fa fa-th me-2"></i>History</a>
+                    <a href="/settingUser" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
                     </div>
+                </div>
             </nav>
         </div>
         <!-- Sidebar End -->
