@@ -66,9 +66,9 @@
                             <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
                             <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
                         </div>
-                    <a href="/User/LaporanSaya" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Laporan Saya</a>
+                    <a href="/laporanSaya" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Laporan Saya</a>
                     <a href="/userHistory" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>History</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
+                    <a href="/settingUser" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
                     </div>
                 </div>
                 </div>

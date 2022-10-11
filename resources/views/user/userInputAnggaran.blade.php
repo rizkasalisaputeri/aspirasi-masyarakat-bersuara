@@ -57,19 +57,20 @@
                         <h6 class="mb-0">Jhon Doe</h6>
                         <span>User</span>
                     </div>
-                    <div class="navbar-nav w-100">
-                        <a href="/user" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Input Laporan</a>
-                            <div class="dropdown-menu bg-transparent border-0">
-                                <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
-                                <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
-                            </div>
-                        <a href="/User/LaporanSaya" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Laporan Saya</a>
-                        <a href="/userHistory" class="nav-item nav-link "><i class="fa fa-th me-2"></i>History</a>
-                        <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="/user" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Input Laporan</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
+                            <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
                         </div>
+                    <a href="/laporanSaya" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Laporan Saya</a>
+                    <a href="/userHistory" class="nav-item nav-link "><i class="fa fa-th me-2"></i>History</a>
+                    <a href="settingUser" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
                     </div>
+                </div>
             </nav>
         </div>
         <!-- Sidebar End -->
@@ -90,69 +91,6 @@
                         <div class="navbar-nav align-items-center ms-auto">
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                    <i class="fa fa-envelope me-lg-2"></i>
-                                    <span class="d-none d-lg-inline-flex">Message</span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                                    <a href="#" class="dropdown-item">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                            <div class="ms-2">
-                                                <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                                <small>15 minutes ago</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <hr class="dropdown-divider">
-                                    <a href="#" class="dropdown-item">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                            <div class="ms-2">
-                                                <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                                <small>15 minutes ago</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <hr class="dropdown-divider">
-                                    <a href="#" class="dropdown-item">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                            <div class="ms-2">
-                                                <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                                <small>15 minutes ago</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <hr class="dropdown-divider">
-                                    <a href="#" class="dropdown-item text-center">See all message</a>
-                                </div>
-                            </div>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                    <i class="fa fa-bell me-lg-2"></i>
-                                    <span class="d-none d-lg-inline-flex">Notificatin</span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                                    <a href="#" class="dropdown-item">
-                                        <h6 class="fw-normal mb-0">Profile updated</h6>
-                                        <small>15 minutes ago</small>
-                                    </a>
-                                    <hr class="dropdown-divider">
-                                    <a href="#" class="dropdown-item">
-                                        <h6 class="fw-normal mb-0">New user added</h6>
-                                        <small>15 minutes ago</small>
-                                    </a>
-                                    <hr class="dropdown-divider">
-                                    <a href="#" class="dropdown-item">
-                                        <h6 class="fw-normal mb-0">Password changed</h6>
-                                        <small>15 minutes ago</small>
-                                    </a>
-                                    <hr class="dropdown-divider">
-                                    <a href="#" class="dropdown-item text-center">See all notifications</a>
-                                </div>
-                            </div>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                                     <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
                                     <span class="d-none d-lg-inline-flex">John Doe</span>
                                 </a>
@@ -165,7 +103,6 @@
                         </div>
                     </nav>
                     <!-- Navbar End -->
-
                     <div class="col-sm-120 col-xl-60">
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Laporan Anggaran</h6>
@@ -195,8 +132,6 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                    
-
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Masyarakat Bersuara | Login</title>
+    <title>Masyarakat Bersuara | Laporan Saya</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -41,7 +41,6 @@
         </div>
         <!-- Spinner End -->
 
-
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
@@ -66,15 +65,14 @@
                             <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
                             <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
                         </div>
-                    <a href="/User/LaporanSaya" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Laporan Saya</a>
+                    <a href="/laporanSaya" class="nav-item nav-link  "><i class="fa fa-th me-2"></i>Laporan Saya</a>
                     <a href="/userHistory" class="nav-item nav-link "><i class="fa fa-th me-2"></i>History</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
+                    <a href="/settingUser" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
                     </div>
                 </div>
             </nav>
         </div>
         <!-- Sidebar End -->
-
                 <!-- Content Start -->
                 <div class="content">
                     <!-- Navbar Start -->
@@ -166,6 +164,7 @@
                         </div>
                     </nav>
                     <!-- Navbar End -->
+                    
             <!-- Sale & Revenue Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">

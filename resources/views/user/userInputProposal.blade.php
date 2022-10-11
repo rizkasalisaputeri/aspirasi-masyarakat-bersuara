@@ -66,9 +66,9 @@
                             <a href="/InputLaporanProposal" class="dropdown-item">Laporan Proposal</a>
                             <a href="/InputLaporanAnggaran" class="dropdown-item">Laporan Anggaran</a>
                         </div>
-                    <a href="/User/LaporanSaya" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Laporan Saya</a>
+                    <a href="/laporanSaya" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Laporan Saya</a>
                     <a href="/userHistory" class="nav-item nav-link "><i class="fa fa-th me-2"></i>History</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
+                    <a href="/settingUser" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Setting Profil</a>
                     </div>
                 </div>
             </nav>
@@ -105,7 +105,7 @@
                     <!-- Navbar End -->
                     <div class="col-sm-120 col-xl-60">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Laporan Anggaran</h6>
+                            <h6 class="mb-4">Laporan Proposal</h6>
                             <div class="form-floating mb-3">
                                 <input type="judul" class="form-control" id="floatingInput"
                                     placeholder="judulLaporan">

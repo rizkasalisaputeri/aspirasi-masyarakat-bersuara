@@ -69,9 +69,13 @@ Route::get('/userHistory', function () {
     return view('user/userHistory');
 });
 
-Route::get('/User/LaporanSaya', function () {
+Route::get('/laporanSaya', function () {
     return view('user/laporanSaya');
 });
 Route::get('/user', function () {
     return view('user/dashboardUser');
+});
+
+Route::get('/settingUser', function () {
+    return view('user/settingUser');
 });
