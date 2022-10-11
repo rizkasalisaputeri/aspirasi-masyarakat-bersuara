@@ -72,10 +72,16 @@ Route::get('/userHistory', function () {
 Route::get('/laporanSaya', function () {
     return view('user/laporanSaya');
 });
+
 Route::get('/user', function () {
     return view('user/dashboardUser');
 });
 
+<<<<<<< HEAD
 Route::get('/settingUser', function () {
     return view('user/settingUser');
+=======
+Route::get('/Admin/Dashboard', function () {
+    return view('admin/dashboardAdm');
+>>>>>>> 3655a42a1ba8a876e0a56a0fc8107803ee927d97
 });
