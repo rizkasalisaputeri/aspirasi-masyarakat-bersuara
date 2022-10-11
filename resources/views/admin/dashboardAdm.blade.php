@@ -54,7 +54,7 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
+                        <h6 class="mb-0">Chloe Kiehls</h6>
                         <span>Admin</span>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h6 class="mb-0">Laporan masuk bulan ini</h6>
-                                <a href="">Show All</a>
+                                <a href="/editLaporan">Show All</a>
                             </div>
                             <canvas id="worldwide-sales"></canvas>
                         </div>

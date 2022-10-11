@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\adminController;
+use App\Http\Controllers\userController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,56 +51,35 @@ Route::get('/login', function () {
 });
 
 
-Route::get('/dashboardUser', function () {
-    return view('user/dashboardUser');
-});
+//user
+Route::get('/dashboardUser', [userController::class,'showDashUser']);
 
 Route::get('/verifikasi', function () {
     return view('verifikasi');
 });
 
-Route::get('/InputLaporanProposal', function () {
-    return view('user/userInputProposal');
-});
+Route::get('/InputLaporanProposal', [userController::class,'inputProposal']);
 
-Route::get('/InputLaporanAnggaran', function () {
-    return view('user/userInputAnggaran');
-});
+Route::get('/InputLaporanAnggaran', [userController::class,'inputAnggaran']);
 
-Route::get('/userHistory', function () {
-    return view('user/userHistory');
-});
+Route::get('/userHistory', [userController::class,'showUserHistory']);
 
-Route::get('/laporanSaya', function () {
-    return view('user/laporanSaya');
-});
-Route::get('/user', function () {
-    return view('user/dashboardUser');
-});
+Route::get('/laporanSaya', [userController::class,'showLaporanSaya']);
+
+Route::get('/user', [userController::class,'showDashUser']);
 
 
-Route::get('/settingUser', function () {
-    return view('user/settingUser');
+Route::get('/settingUser', [userController::class,'showSettingUser']);
 
-});   
+
+//Admin
  
-Route::get('/admin', function () {
-    return view('admin/dashboardAdm');
-});
+Route::get('/admin', [adminController::class, 'showDashAdm']);
 
-Route::get('/editUser', function () {
-    return view('admin/editUser');
-});
+Route::get('/editUser', [adminController::class, 'showEditUser']);
 
-Route::get('/editLaporan', function () {
-    return view('admin/editLaporan');
-});
+Route::get('/editLaporan', [adminController::class, 'showEditLaporan']);
 
-Route::get('/editLokasi', function () {
-    return view('admin/editLokasi');
-});
+Route::get('/editLokasi', [adminController::class, 'showEditLokasi']);
 
-Route::get('/editKategori', function () {
-    return view('admin/editKategori');
-
-});
+Route::get('/editKategori', [adminController::class, 'showEditKategori']);
