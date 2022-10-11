@@ -50,13 +50,13 @@ Route::get('/login', function () {
     return view('login');
 });
 
-
-//user
-Route::get('/dashboardUser', [userController::class,'showDashUser']);
-
 Route::get('/verifikasi', function () {
     return view('verifikasi');
 });
+
+
+//user
+Route::get('/dashboardUser', [userController::class,'showDashUser']);
 
 Route::get('/InputLaporanProposal', [userController::class,'inputProposal']);
 
@@ -67,7 +67,6 @@ Route::get('/userHistory', [userController::class,'showUserHistory']);
 Route::get('/laporanSaya', [userController::class,'showLaporanSaya']);
 
 Route::get('/user', [userController::class,'showDashUser']);
-
 
 Route::get('/settingUser', [userController::class,'showSettingUser']);
 
