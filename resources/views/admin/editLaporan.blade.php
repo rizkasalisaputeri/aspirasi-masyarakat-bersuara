@@ -107,19 +107,26 @@
                                 <table class="table text-start align-middle table-bordered table-hover mb-0">
                                     <thead>
                                         <tr class="text-dark">
-                                            <th scope="col">ID Laporan</th>
-                                            <th scope="col">NIK Pelapor</th>
-                                            <th scope="col">Nama Pelapor</th>
-                                            <th scope="col">Asal Instansi</th>
-                                            <th scope="col">Tanggal Laporan</th>
-                                            <th scope="col">Kategori Laporan</th>
-                                            <th scope="col">Jenis Laporan</th>
+                                            <th scope="col">ID_Laporan</th>
+                                            <th scope="col">User_id</th>
+                                            <th scope="col">Kategori_id</th>
+                                            <th scope="col">Jenis_id</th>
                                             <th scope="col">Status</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        @foreach ($laporans as $laporan)
+                                            <tr>
+                                                <td>{{$laporan->id}}</td>
+                                                <td>{{$laporan->User_id}}</td>
+                                                <td>{{$laporan->Kategori_id}}</td>
+                                                <td>{{$laporan->Jenis_id}}</td>
+                                                <td>{{$laporan->Status}}</td>
+                                                
+                                            </tr>
+                                        @endforeach
+                                        {{-- <tr>
                                             <td>A11</td>
                                             <td>152111513043</td>
                                             <td>Rizka Salisa</td>
@@ -173,7 +180,7 @@
                                             <td>Laporan Proposal</td>
                                             <td>Selesai</td>
                                             <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                        </tr>
+                                        </tr> --}}
                                     </tbody>
                                 </table>
                             </div>

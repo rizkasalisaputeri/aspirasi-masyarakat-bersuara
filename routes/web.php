@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,7 +78,7 @@ Route::get('/admin', [adminController::class, 'showDashAdm']);
 
 Route::get('/editUser', [adminController::class, 'showEditUser']);
 
-Route::get('/editLaporan', [adminController::class, 'showEditLaporan']);
+Route::get('/editLaporan', [LaporanController::class, 'index']);
 
 Route::get('/editLokasi', [adminController::class, 'showEditLokasi']);
 

@@ -2,7 +2,6 @@
 
 namespace Illuminate\Database\Eloquent\Concerns;
 
-use BackedEnum;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use DateTimeImmutable;
@@ -308,7 +307,7 @@ trait HasAttributes
             }
 
             if ($this->isEnumCastable($key) && (! ($attributes[$key] ?? null) instanceof Arrayable)) {
-                $attributes[$key] = isset($attributes[$key]) ? $this->getStorableEnumValue($attributes[$key]) : null;
+                $attributes[$key] = isset($attributes[$key]) ? $attributes[$key]->value : null;
             }
 
             if ($attributes[$key] instanceof Arrayable) {
@@ -815,7 +814,7 @@ trait HasAttributes
             return $value;
         }
 
-        return $this->getEnumCaseFromValue($castType, $value);
+        return $castType::from($value);
     }
 
     /**
@@ -1111,7 +1110,7 @@ trait HasAttributes
      * Set the value of an enum castable attribute.
      *
      * @param  string  $key
-     * @param  \UnitEnum|string|int  $value
+     * @param  \BackedEnum  $value
      * @return void
      */
     protected function setEnumCastableAttribute($key, $value)
@@ -1120,40 +1119,11 @@ trait HasAttributes
 
         if (! isset($value)) {
             $this->attributes[$key] = null;
-        } elseif (is_object($value)) {
-            $this->attributes[$key] = $this->getStorableEnumValue($value);
+        } elseif ($value instanceof $enumClass) {
+            $this->attributes[$key] = $value->value;
         } else {
-            $this->attributes[$key] = $this->getStorableEnumValue(
-                $this->getEnumCaseFromValue($enumClass, $value)
-            );
+            $this->attributes[$key] = $enumClass::from($value)->value;
         }
-    }
-
-    /**
-     * Get an enum case instance from a given class and value.
-     *
-     * @param  string  $enumClass
-     * @param  string|int  $value
-     * @return \UnitEnum|\BackedEnum
-     */
-    protected function getEnumCaseFromValue($enumClass, $value)
-    {
-        return is_subclass_of($enumClass, BackedEnum::class)
-                ? $enumClass::from($value)
-                : constant($enumClass.'::'.$value);
-    }
-
-    /**
-     * Get the storable value from the given enum.
-     *
-     * @param  \UnitEnum|\BackedEnum  $value
-     * @return string|int
-     */
-    protected function getStorableEnumValue($value)
-    {
-        return $value instanceof BackedEnum
-                ? $value->value
-                : $value->name;
     }
 
     /**

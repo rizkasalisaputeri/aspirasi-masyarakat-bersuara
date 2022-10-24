@@ -5,6 +5,11 @@ use Illuminate\Http\Request;
 
 class userController extends Controller
 {
+    public function index()
+    {
+        $user = App\User::first();
+    }
+    
     public function showDashUser()
     {
         return view('user/dashboardUser');
