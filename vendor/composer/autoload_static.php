@@ -181,8 +181,8 @@ class ComposerStaticInit5ef8e758d9574cbd355ebf3105e55f6a
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Whoops\\' => 
         array (
@@ -549,6 +549,7 @@ class ComposerStaticInit5ef8e758d9574cbd355ebf3105e55f6a
         'App\\Models\\Laporan' => __DIR__ . '/../..' . '/app/Models/Laporan.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\login' => __DIR__ . '/../..' . '/app/Models/login.php',
+        'App\\Models\\lokasi' => __DIR__ . '/../..' . '/app/Models/lokasi.php',
         'App\\Policies\\JenisLaporanPolicy' => __DIR__ . '/../..' . '/app/Policies/JenisLaporanPolicy.php',
         'App\\Policies\\KategoriLaporanPolicy' => __DIR__ . '/../..' . '/app/Policies/KategoriLaporanPolicy.php',
         'App\\Policies\\LaporanPolicy' => __DIR__ . '/../..' . '/app/Policies/LaporanPolicy.php',
@@ -750,6 +751,7 @@ class ComposerStaticInit5ef8e758d9574cbd355ebf3105e55f6a
         'Database\\Factories\\JenisLaporanFactory' => __DIR__ . '/../..' . '/database/factories/JenisLaporanFactory.php',
         'Database\\Factories\\KategoriLaporanFactory' => __DIR__ . '/../..' . '/database/factories/KategoriLaporanFactory.php',
         'Database\\Factories\\LaporanFactory' => __DIR__ . '/../..' . '/database/factories/LaporanFactory.php',
+        'Database\\Factories\\LokasiFactory' => __DIR__ . '/../..' . '/database/factories/LokasiFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'Database\\Seeders\\JenisLaporanSeeder' => __DIR__ . '/../..' . '/database/seeders/JenisLaporanSeeder.php',
