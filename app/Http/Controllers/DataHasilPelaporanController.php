@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kategori_Laporan;
-use App\Http\Requests\StoreKategori_LaporanRequest;
-use App\Http\Requests\UpdateKategori_LaporanRequest;
+use App\Models\Data_hasil_pelaporan;
+use App\Http\Requests\StoreData_hasil_pelaporanRequest;
+use App\Http\Requests\UpdateData_hasil_pelaporanRequest;
 
-class KategoriLaporanController extends Controller
+class DataHasilPelaporanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class KategoriLaporanController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreKategori_LaporanRequest  $request
+     * @param  \App\Http\Requests\StoreData_hasil_pelaporanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreKategori_LaporanRequest $request)
+    public function store(StoreData_hasil_pelaporanRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class KategoriLaporanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Kategori_Laporan  $kategori_Laporan
+     * @param  \App\Models\Data_hasil_pelaporan  $data_hasil_pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function show(Kategori_Laporan $kategori_Laporan)
+    public function show(Data_hasil_pelaporan $data_hasil_pelaporan)
     {
         //
     }
@@ -53,10 +53,10 @@ class KategoriLaporanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Kategori_Laporan  $kategori_Laporan
+     * @param  \App\Models\Data_hasil_pelaporan  $data_hasil_pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kategori_Laporan $kategori_Laporan)
+    public function edit(Data_hasil_pelaporan $data_hasil_pelaporan)
     {
         //
     }
@@ -64,11 +64,11 @@ class KategoriLaporanController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateKategori_LaporanRequest  $request
-     * @param  \App\Models\Kategori_Laporan  $kategori_Laporan
+     * @param  \App\Http\Requests\UpdateData_hasil_pelaporanRequest  $request
+     * @param  \App\Models\Data_hasil_pelaporan  $data_hasil_pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateKategori_LaporanRequest $request, Kategori_Laporan $kategori_Laporan)
+    public function update(UpdateData_hasil_pelaporanRequest $request, Data_hasil_pelaporan $data_hasil_pelaporan)
     {
         //
     }
@@ -76,10 +76,10 @@ class KategoriLaporanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Kategori_Laporan  $kategori_Laporan
+     * @param  \App\Models\Data_hasil_pelaporan  $data_hasil_pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kategori_Laporan $kategori_Laporan)
+    public function destroy(Data_hasil_pelaporan $data_hasil_pelaporan)
     {
         //
     }

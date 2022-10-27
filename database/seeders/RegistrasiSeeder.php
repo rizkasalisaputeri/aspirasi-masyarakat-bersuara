@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class JenisLaporanSeeder extends Seeder
+class RegistrasiSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,12 +14,6 @@ class JenisLaporanSeeder extends Seeder
      */
     public function run()
     {
-        JenisLaporan::create([
-            'Nama_Laporan' => 'Laporan Proposal',
-        ]);
-
-        JenisLaporan::create([
-            'Nama_Laporan' => 'Laporan Anggaran',
-        ]);
+        //
     }
 }

@@ -5,11 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KategoriLaporan extends Model
+class Instansi extends Model
 {
     use HasFactory;
-
-    public function Laporan(){
-        return $this->belongsTo(Laporan::class);
-    }
 }

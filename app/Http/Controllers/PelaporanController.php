@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\JenisLaporan;
-use App\Http\Requests\StoreJenisLaporanRequest;
-use App\Http\Requests\UpdateJenisLaporanRequest;
+use App\Models\Pelaporan;
+use App\Http\Requests\StorePelaporanRequest;
+use App\Http\Requests\UpdatePelaporanRequest;
 
-class JenisLaporanController extends Controller
+class PelaporanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +15,7 @@ class JenisLaporanController extends Controller
      */
     public function index()
     {
-        return view('admin/editJenis', [
-            'Nama_Laporan' => Nama_Laporan
-        ]
-        );
+        //
     }
 
     /**
@@ -34,10 +31,10 @@ class JenisLaporanController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreJenisLaporanRequest  $request
+     * @param  \App\Http\Requests\StorePelaporanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreJenisLaporanRequest $request)
+    public function store(StorePelaporanRequest $request)
     {
         //
     }
@@ -45,10 +42,10 @@ class JenisLaporanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\JenisLaporan  $jenisLaporan
+     * @param  \App\Models\Pelaporan  $pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function show(JenisLaporan $jenisLaporan)
+    public function show(Pelaporan $pelaporan)
     {
         //
     }
@@ -56,10 +53,10 @@ class JenisLaporanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\JenisLaporan  $jenisLaporan
+     * @param  \App\Models\Pelaporan  $pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function edit(JenisLaporan $jenisLaporan)
+    public function edit(Pelaporan $pelaporan)
     {
         //
     }
@@ -67,11 +64,11 @@ class JenisLaporanController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateJenisLaporanRequest  $request
-     * @param  \App\Models\JenisLaporan  $jenisLaporan
+     * @param  \App\Http\Requests\UpdatePelaporanRequest  $request
+     * @param  \App\Models\Pelaporan  $pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateJenisLaporanRequest $request, JenisLaporan $jenisLaporan)
+    public function update(UpdatePelaporanRequest $request, Pelaporan $pelaporan)
     {
         //
     }
@@ -79,10 +76,10 @@ class JenisLaporanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\JenisLaporan  $jenisLaporan
+     * @param  \App\Models\Pelaporan  $pelaporan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(JenisLaporan $jenisLaporan)
+    public function destroy(Pelaporan $pelaporan)
     {
         //
     }

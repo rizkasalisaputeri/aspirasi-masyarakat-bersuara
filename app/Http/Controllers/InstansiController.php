@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kategori_Laporan;
-use App\Http\Requests\StoreKategori_LaporanRequest;
-use App\Http\Requests\UpdateKategori_LaporanRequest;
+use App\Models\Instansi;
+use App\Http\Requests\StoreInstansiRequest;
+use App\Http\Requests\UpdateInstansiRequest;
 
-class KategoriLaporanController extends Controller
+class InstansiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class KategoriLaporanController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreKategori_LaporanRequest  $request
+     * @param  \App\Http\Requests\StoreInstansiRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreKategori_LaporanRequest $request)
+    public function store(StoreInstansiRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class KategoriLaporanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Kategori_Laporan  $kategori_Laporan
+     * @param  \App\Models\Instansi  $instansi
      * @return \Illuminate\Http\Response
      */
-    public function show(Kategori_Laporan $kategori_Laporan)
+    public function show(Instansi $instansi)
     {
         //
     }
@@ -53,10 +53,10 @@ class KategoriLaporanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Kategori_Laporan  $kategori_Laporan
+     * @param  \App\Models\Instansi  $instansi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kategori_Laporan $kategori_Laporan)
+    public function edit(Instansi $instansi)
     {
         //
     }
@@ -64,11 +64,11 @@ class KategoriLaporanController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateKategori_LaporanRequest  $request
-     * @param  \App\Models\Kategori_Laporan  $kategori_Laporan
+     * @param  \App\Http\Requests\UpdateInstansiRequest  $request
+     * @param  \App\Models\Instansi  $instansi
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateKategori_LaporanRequest $request, Kategori_Laporan $kategori_Laporan)
+    public function update(UpdateInstansiRequest $request, Instansi $instansi)
     {
         //
     }
@@ -76,10 +76,10 @@ class KategoriLaporanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Kategori_Laporan  $kategori_Laporan
+     * @param  \App\Models\Instansi  $instansi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kategori_Laporan $kategori_Laporan)
+    public function destroy(Instansi $instansi)
     {
         //
     }

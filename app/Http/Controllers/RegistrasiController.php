@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\lokasi;
-use App\Http\Requests\StorelokasiRequest;
-use App\Http\Requests\UpdatelokasiRequest;
+use App\Models\Registrasi;
+use App\Http\Requests\StoreRegistrasiRequest;
+use App\Http\Requests\UpdateRegistrasiRequest;
 
-class LokasiController extends Controller
+class RegistrasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class LokasiController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorelokasiRequest  $request
+     * @param  \App\Http\Requests\StoreRegistrasiRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorelokasiRequest $request)
+    public function store(StoreRegistrasiRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class LokasiController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\lokasi  $lokasi
+     * @param  \App\Models\Registrasi  $registrasi
      * @return \Illuminate\Http\Response
      */
-    public function show(lokasi $lokasi)
+    public function show(Registrasi $registrasi)
     {
         //
     }
@@ -53,10 +53,10 @@ class LokasiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\lokasi  $lokasi
+     * @param  \App\Models\Registrasi  $registrasi
      * @return \Illuminate\Http\Response
      */
-    public function edit(lokasi $lokasi)
+    public function edit(Registrasi $registrasi)
     {
         //
     }
@@ -64,11 +64,11 @@ class LokasiController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatelokasiRequest  $request
-     * @param  \App\Models\lokasi  $lokasi
+     * @param  \App\Http\Requests\UpdateRegistrasiRequest  $request
+     * @param  \App\Models\Registrasi  $registrasi
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatelokasiRequest $request, lokasi $lokasi)
+    public function update(UpdateRegistrasiRequest $request, Registrasi $registrasi)
     {
         //
     }
@@ -76,10 +76,10 @@ class LokasiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\lokasi  $lokasi
+     * @param  \App\Models\Registrasi  $registrasi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(lokasi $lokasi)
+    public function destroy(Registrasi $registrasi)
     {
         //
     }
