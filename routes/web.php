@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\adminController;
-use App\Http\Controllers\userController;
+use App\Http\Controllers\PelaporController;
 use App\Http\Controllers\LaporanController;
 
 /*
@@ -67,7 +67,7 @@ Route::get('/userHistory', [userController::class,'showUserHistory']);
 
 Route::get('/laporanSaya', [userController::class,'showLaporanSaya']);
 
-Route::get('/user', [userController::class,'showDashUser']);
+Route::get('/user', [PelaporController::class,'index']);
 
 Route::get('/settingUser', [userController::class,'showSettingUser']);
 
@@ -83,3 +83,5 @@ Route::get('/editLaporan', [LaporanController::class, 'index']);
 Route::get('/editLokasi', [adminController::class, 'showEditLokasi']);
 
 Route::get('/editKategori', [adminController::class, 'showEditKategori']);
+
+

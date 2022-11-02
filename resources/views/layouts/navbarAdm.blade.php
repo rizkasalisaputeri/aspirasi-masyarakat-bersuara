@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Admin | Edit Kategori</title>
+    <title>Admin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -12,10 +12,10 @@
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -41,7 +41,6 @@
         </div>
         <!-- Spinner End -->
 
-
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
@@ -54,16 +53,14 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Chloe Kielhs</h6>
-                        <span>ADMIN</span>
+                        <h6 class="mb-0">John</h6>
+                        <span>Admin</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="/admin" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/admin" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <a href="/editLaporan" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Edit Laporan</a>
                     <a href="/editUser" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Edit User</a>
-                    <a href="/editLokasi" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Edit Lokasi</a>
-                    <a href="/editKategori" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Edit Kategori</a>
                     </div>
                 </div>
             </nav>
@@ -87,7 +84,7 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                                     <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <span class="d-none d-lg-inline-flex">Chloe Kiehls</span>
+                                    <span class="d-none d-lg-inline-flex">John</span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                                     <a href="/biodata" class="dropdown-item">My Profile</a>
@@ -98,57 +95,18 @@
                         </div>
                     </nav>
                     <!-- Navbar End -->
-                    <div class="container-fluid pt-4 px-4">
-                        <div class="bg-light text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Laporan Saya</h6>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table text-start align-middle table-bordered table-hover mb-0">
-                                    <thead>
-                                        <tr class="text-dark">
-                                            <th scope="col">ID Kategori</th>
-                                            <th scope="col">Nama Kategori</th>
-                                            <th scope="col">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1001</td>
-                                            <td>Kesehatan</td>
-                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>1002</td>
-                                            <td>Politik</td>
-                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>1003</td>
-                                            <td>Ekonomi</td>
-                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>1004</td>
-                                            <td>Pendidikan</td>
-                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>1005</td>
-                                            <td>Pariwisata</td>
-                                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Footer Start -->
+
+
+        <div class="navbarAdm">
+            @yield('content')
+        </div>
+
+            <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Masyarakat Bersuara</a>, All Right Reserved. 
+                            &copy; <a href="#">Masyarakat Bersuara</a>, All Right Reserved.
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->

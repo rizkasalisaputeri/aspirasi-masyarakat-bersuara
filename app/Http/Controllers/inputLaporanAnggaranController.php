@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Instansi;
-use App\Http\Requests\StoreInstansiRequest;
-use App\Http\Requests\UpdateInstansiRequest;
+use App\Models\inputLaporanAnggaran;
+use Illuminate\Http\Request;
 
-class InstansiController extends Controller
+class inputLaporanAnggaranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +30,10 @@ class InstansiController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreInstansiRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreInstansiRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,10 +41,10 @@ class InstansiController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Instansi  $instansi
+     * @param  \App\Models\inputLaporanAnggaran  $inputLaporanAnggaran
      * @return \Illuminate\Http\Response
      */
-    public function show(Instansi $instansi)
+    public function show(inputLaporanAnggaran $inputLaporanAnggaran)
     {
         //
     }
@@ -53,10 +52,10 @@ class InstansiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Instansi  $instansi
+     * @param  \App\Models\inputLaporanAnggaran  $inputLaporanAnggaran
      * @return \Illuminate\Http\Response
      */
-    public function edit(Instansi $instansi)
+    public function edit(inputLaporanAnggaran $inputLaporanAnggaran)
     {
         //
     }
@@ -64,11 +63,11 @@ class InstansiController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateInstansiRequest  $request
-     * @param  \App\Models\Instansi  $instansi
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\inputLaporanAnggaran  $inputLaporanAnggaran
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateInstansiRequest $request, Instansi $instansi)
+    public function update(Request $request, inputLaporanAnggaran $inputLaporanAnggaran)
     {
         //
     }
@@ -76,10 +75,10 @@ class InstansiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Instansi  $instansi
+     * @param  \App\Models\inputLaporanAnggaran  $inputLaporanAnggaran
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Instansi $instansi)
+    public function destroy(inputLaporanAnggaran $inputLaporanAnggaran)
     {
         //
     }
