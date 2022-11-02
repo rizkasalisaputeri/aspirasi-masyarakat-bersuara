@@ -15,7 +15,7 @@ class KategoriLaporanController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin/editKategori');
     }
 
     /**
