@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('pelaporans', function (Blueprint $table) {
             $table->id();
             $table->string('judul_laporan');
-            $table->string('kategori_laporan');
             $table->string('tgl_laporan');
             $table->binary('file_laporan')->nullable()->default(12);
             $table->timestamps();

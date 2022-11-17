@@ -15,14 +15,9 @@
                                 <label for="floatingTextarea">Rangkuman Isi Laporan</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <select class="form-select" id="floatingSelect"
-                                    aria-label="Floating label select example">
-                                    <option selected>Pilih Lokasi</option>
-                                    <option value="1">Tambaksari</option>
-                                    <option value="2">Ngagel</option>
-                                    <option value="3">Jemusari</option>
-                                </select>
-                                <label for="floatingSelect">Lokasi Kejadian</label>
+                                <input type="judul" class="form-control" id="floatingInput"
+                                    placeholder="asal_instansi">
+                                <label for="floatingInput">Asal Instansi</label>
                             </div>
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Upload Laporan</label>

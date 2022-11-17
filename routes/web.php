@@ -73,7 +73,7 @@ Route::get('/InputLaporanProposal', [InputLaporanProposalController::class,'inde
 
 Route::get('/InputLaporanAnggaran', [InputLaporanAnggaranController::class,'index']);
 
-Route::get('/laporanSaya', [userController::class,'index']);
+Route::get('/laporanSaya', [laporanSayaController::class,'index']);
 
 Route::get('/user', [PelaporController::class,'index']);
 

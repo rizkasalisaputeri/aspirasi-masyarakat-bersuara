@@ -14,11 +14,21 @@
                                             <th scope="col">Jenis Laporan</th>
                                             <th scope="col">Judul Laporan</th>
                                             <th scope="col">Status</th>
-                                            <th scope="col">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
+                                        @foreach ($laporans as $laporan)
+                                            <tr>
+                                                <td>{{$laporan->id}}</td>
+                                                <td>{{$crU->asal_instansi}}</td>
+                                                <td>{{$crU->nama_depan}}</td>
+                                                <td>{{$crU->nama_belakang}}</td>
+                                                <td>{{$crU->alamat}}</td>
+                                                <td>{{$crU->email}}</td>
+                                                <td>{{$crU->password}}</td>
+
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

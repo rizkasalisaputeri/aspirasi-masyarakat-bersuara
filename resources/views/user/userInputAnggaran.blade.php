@@ -14,17 +14,11 @@
                                     id="floatingTextarea" style="height: 150px;"></textarea>
                                 <label for="floatingTextarea">Rangkuman Isi Laporan</label>
                             </div>
-                            <div class="form-floating mb-3">
-                                <select class="form-select" id="floatingSelect"
-                                    aria-label="Floating label select example">
-                                    <option selected>Pilih Lokasi</option>
-                                    <option value="1">Tambaksari</option>
-                                    <option value="2">Ngagel</option>
-                                    <option value="3">Jemusari</option>
-                                </select>
-                                <label for="floatingSelect">Lokasi Kejadian</label>
-                            </div>
                             <div class="mb-3">
+                                <label for="asal_instansi" style="color:black" class="form-label">Asal Instansi</label>
+                                <input type="asal_instansi" class="form-control"id="asal_instansi">
+                            </div>
+                              </div>
                                 <label for="formFile" class="form-label">Upload Laporan</label>
                                 <input class="form-control" type="file" id="formFile">
                             </div>
