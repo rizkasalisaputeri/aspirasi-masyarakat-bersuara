@@ -1,10 +1,18 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\userController;
 use App\Http\Controllers\adminController;
-use App\Http\Controllers\PelaporController;
 use App\Http\Controllers\LaporanController;
-
+use App\Http\Controllers\PelaporController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\PelaporanController;
+use App\Http\Controllers\RegistrasiController;
+use App\Http\Controllers\laporanSayaController;
+use App\Http\Controllers\SettingPelaporController;
+use App\Http\Controllers\inputLaporanAnggaranController;
+use App\Http\Controllers\inputLaporanProposalController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,33 +63,29 @@ Route::get('/verifikasi', function () {
     return view('verifikasi');
 });
 
+Route::get('/regist', [RegistrasiController::class,'index']);
+Route::post('/regist', [RegistrasiController::class,'create']);
 
 //user
-Route::get('/dashboardUser', [userController::class,'showDashUser']);
+Route::get('/dashboardUser', [PelaporController::class,'index']);
 
-Route::get('/InputLaporanProposal', [userController::class,'inputProposal']);
+Route::get('/InputLaporanProposal', [InputLaporanProposalController::class,'index']);
 
-Route::get('/InputLaporanAnggaran', [userController::class,'inputAnggaran']);
+Route::get('/InputLaporanAnggaran', [InputLaporanAnggaranController::class,'index']);
 
-Route::get('/userHistory', [userController::class,'showUserHistory']);
-
-Route::get('/laporanSaya', [userController::class,'showLaporanSaya']);
+Route::get('/laporanSaya', [userController::class,'index']);
 
 Route::get('/user', [PelaporController::class,'index']);
 
-Route::get('/settingUser', [userController::class,'showSettingUser']);
+Route::get('/settingUser', [SettingPelaporController::class,'index']);
 
 
 //Admin
- 
+
 Route::get('/admin', [adminController::class, 'showDashAdm']);
+// Route::get('/editUser', [userController::class, 'index']);
+// Route::get('createUser', [userController::class, 'create']);
+// Route::post('store', [userController::class, 'store']);
+Route::resource('user', userController::class);
 
-Route::get('/editUser', [adminController::class, 'showEditUser']);
-
-Route::get('/editLaporan', [LaporanController::class, 'index']);
-
-Route::get('/editLokasi', [adminController::class, 'showEditLokasi']);
-
-Route::get('/editKategori', [adminController::class, 'showEditKategori']);
-
-
+Route::get('/editLaporan', [PelaporanController::class, 'index']);

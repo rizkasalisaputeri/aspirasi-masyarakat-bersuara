@@ -15,7 +15,7 @@ class RegistrasiController extends Controller
      */
     public function index()
     {
-        return view('admin/editUser');
+        $reg = Registrasi::all();
     }
 
     /**
@@ -25,7 +25,7 @@ class RegistrasiController extends Controller
      */
     public function create()
     {
-        //
+        return view('/regist');
     }
 
     /**
@@ -36,7 +36,8 @@ class RegistrasiController extends Controller
      */
     public function store(StoreRegistrasiRequest $request)
     {
-        //
+        Registrasi::create($request->expect(['_token','submit']));
+        return redirect('/login');
     }
 
     /**

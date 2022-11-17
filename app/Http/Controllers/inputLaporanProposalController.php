@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\inputLaporanAnggaran;
+use App\Models\inputLaporanProposalControler;
 use Illuminate\Http\Request;
 
-class inputLaporanAnggaranController extends Controller
+class inputLaporanProposalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class inputLaporanAnggaranController extends Controller
      */
     public function index()
     {
-        return view('user/userInputAnggaran');
+        return view('user/userInputProposal');
     }
 
     /**
@@ -41,10 +41,10 @@ class inputLaporanAnggaranController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\inputLaporanAnggaran  $inputLaporanAnggaran
+     * @param  \App\Models\inputLaporanProposal  $inputLaporanProposal
      * @return \Illuminate\Http\Response
      */
-    public function show(inputLaporanAnggaran $inputLaporanAnggaran)
+    public function show(inputLaporanProposal $inputLaporanProposal)
     {
         //
     }
@@ -52,10 +52,10 @@ class inputLaporanAnggaranController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\inputLaporanAnggaran  $inputLaporanAnggaran
+     * @param  \App\Models\inputLaporanProposal  $inputLaporanProposal
      * @return \Illuminate\Http\Response
      */
-    public function edit(inputLaporanAnggaran $inputLaporanAnggaran)
+    public function edit(inputLaporanProposal $inputLaporanProposal)
     {
         //
     }
@@ -64,10 +64,10 @@ class inputLaporanAnggaranController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\inputLaporanAnggaran  $inputLaporanAnggaran
+     * @param  \App\Models\inputLaporanProposal  $inputLaporanProposal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, inputLaporanAnggaran $inputLaporanAnggaran)
+    public function update(Request $request, inputLaporanProposal $inputLaporanProposal)
     {
         //
     }
@@ -75,10 +75,10 @@ class inputLaporanAnggaranController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\inputLaporanAnggaran  $inputLaporanAnggaran
+     * @param  \App\Models\inputLaporanProposal  $inputLaporanProposal
      * @return \Illuminate\Http\Response
      */
-    public function destroy(inputLaporanAnggaran $inputLaporanAnggaran)
+    public function destroy(inputLaporanProposal $inputLaporanProposal)
     {
         //
     }

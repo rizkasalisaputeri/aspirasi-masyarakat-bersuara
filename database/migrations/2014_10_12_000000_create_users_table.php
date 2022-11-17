@@ -19,10 +19,8 @@ return new class extends Migration
             $table->string('nama_belakang');
             $table->string('asal_instansi');
             $table->string('email')->unique();
-            $table->string('password');
             $table->text('alamat');
-            $table->string('nomor_telp');
-            $table->char('NIK');
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });

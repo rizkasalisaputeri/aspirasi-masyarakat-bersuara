@@ -95,7 +95,7 @@
                 </div>
             </nav>
         <!-- Navbar End -->
-    
+
         <!-- Modal -->
         <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -143,153 +143,43 @@
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12">
-              <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-                <div class="card-body p-0">
-                  <div class="row g-0">
-                    <div class="col-lg-6">
-                      <div class="p-5">
-                        <h3 class="fw-normal mb-5">General Infomation</h3>
-      
-                        <div class="form-outline">
-                            <input type="text" id="form3Examplev2" class="form-control form-control-lg" />
-                            <label class="form-label" for="form3Examplev2">Asal Instansi</label>
-                          </div>
-      
-                        <div class="row">
-                          <div class="col-md-6 mb-4 pb-2">
-      
-                            <div class="form-outline">
-                              <input type="text" id="form3Examplev2" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplev2">Nama Depan</label>
-                            </div>
-      
-                          </div>
-                          <div class="col-md-6 mb-4 pb-2">
-      
-                            <div class="form-outline">
-                              <input type="text" id="form3Examplev3" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplev3">Nama Belakang</label>
-                            </div>
-
-                          </div>
-                        </div>
-
-                        <div class="mb-4 pb-2">
-                          <div class="form-outline">
-                            <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
-                            <label class="form-label" for="form3Examplev4">Jabatan</label>
-                          </div>
-                        </div>
-      
-                        <div class="row">
-                          <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-      
-                            <div class="form-outline">
-                              <input type="text" id="form3Examplev5" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplev5">Username</label>
-                            </div>
-      
-                          </div>
-                          <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-      
-                            <div class="form-outline">
-                              <input type="text" id="form3Examplev5" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplev5">Password</label>
-                            </div>
-      
-                          </div>
-                          <div class="col-md-6">
-      
-                          </div>
-                        </div>
-      
-                      </div>
+                <form action="/editUser" method="post">
+                    @csrf
+                    <div class="mb-3">
+                      <label for="exampleInputAsalInstansi" style="color:white" class="form-label">Asal Instansi</label>
+                      <input type="asal_instansi" class="form-control"id="exampleInputAsalInstansi">
                     </div>
-                    <div class="col-lg-6 bg-indigo text-black">
-                      <div class="p-5">
-                        <h3 class="fw-normal mb-5">Contact Details</h3>
-      
-                        <div class="mb-4 pb-2">
-                          <div class="form-outline form-white">
-                            <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                            <label class="form-label" for="form3Examplea2">Alamat</label>
-                          </div>
-                        </div>
-      
-                        <div class="mb-4 pb-2">
-                          <div class="form-outline form-white">
-                            <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
-                            <label class="form-label" for="form3Examplea3">RT/RW</label>
-                          </div>
-                        </div>
-      
-                        <div class="row">
-                          <div class="col-md-5 mb-4 pb-2">
-      
-                            <div class="form-outline form-white">
-                              <input type="text" id="form3Examplea4" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplea4">Kelurahan/Desa</label>
-                            </div>
-      
-                          </div>
-                          <div class="col-md-7 mb-4 pb-2">
-      
-                            <div class="form-outline form-white">
-                              <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplea5">Kecamatan</label>
-                            </div>
-      
-                          </div>
-                        </div>
-      
-                        <div class="mb-4 pb-2">
-                          <div class="form-outline form-white">
-                            <input type="text" id="form3Examplea6" class="form-control form-control-lg" />
-                            <label class="form-label" for="form3Examplea6">Kode Pos</label>
-                          </div>
-                        </div>
-      
-                        <div class="row">
-                          <div class="col-md-5 mb-4 pb-2">
-      
-                            <div class="form-outline form-white">
-                              <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplea7">Nomor Telp</label>
-                            </div>
-      
-                          </div>
-                          <div class="col-md-7 mb-4 pb-2">
-      
-                            <div class="form-outline form-white">
-                              <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
-                              <label class="form-label" for="form3Examplea8">NIK</label>
-                            </div>
-      
-                          </div>
-                        </div>
-      
-                        <div class="form-check d-flex justify-content-start mb-4 pb-3">
-                          <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
-                          <label class="form-check-label text-black" for="form2Example3">
-                            I do accept the <a href="#!" class="text-black"><u>Terms and Conditions</u></a> of your
-                            site.
-
-                          </label>
-                        </div>
-      
-                        <a href="/verifikasi" button type="button" class="btn btn-light btn-lg"
-                          data-mdb-ripple-color="dark">Register</button> </a>
-      
-                      </div>
+                    <div class="mb-3">
+                        <label for="nama_depan" style="color:white" class="form-label">Nama Depan</label>
+                        <input type="nama_depan" class="form-control" id="nama_depan">
                     </div>
-                  </div>
-                </div>
-              </div>
+                    <div class="mb-3">
+                        <label for="nama_belakang" style="color:white" class="form-label">Nama Belakang</label>
+                        <input type="nama_belakang" class="form-control" id="nama_belakang">
+                    </div>
+                    <div class="mb-3">
+                        <label for="alamat" style="color:white" class=" form-label">Alamat</label>
+                        <input type="alamat" class="form-control" id="alamat">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" style="color:white" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" style="color:white" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" style="color:white" class="form-check-input" id="exampleCheck1">
+                      <label style="color:white" class="form-check-label" for="exampleCheck1">Terms of Services</label>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                  </form>
             </div>
           </div>
         </div>
       </section>
-    
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -367,8 +257,8 @@
             <div class="row justify-content-end">
                 <div class="col-lg-8 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Masyarakat Bersuara 2022</a>. All Rights Reserved. 
-                        
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Masyarakat Bersuara 2022</a>. All Rights Reserved.
+
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed by Tasya dan Rizka</p>
                     </div>
