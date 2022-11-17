@@ -4,6 +4,13 @@
                     <div class="col-sm-120 col-xl-60">
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Laporan Proposal</h6>
+                            <form action="store" method="POST">
+                                @csrf
+                            <div class="form-floating mb-3">
+                                <input type="judul" class="form-control" id="floatingInput"
+                                    placeholder="judulLaporan">
+                                <label for="floatingInput">Tanggal</label>
+                            </div>
                             <div class="form-floating mb-3">
                                 <input type="judul" class="form-control" id="floatingInput"
                                     placeholder="judulLaporan">
@@ -23,6 +30,6 @@
                                 <label for="formFile" class="form-label">Upload Laporan</label>
                                 <input class="form-control" type="file" id="formFile">
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <input type="submit" class="btn btn-primary" value="Submit">
                     </div>
 @endsection

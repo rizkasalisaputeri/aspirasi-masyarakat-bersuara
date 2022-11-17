@@ -74,6 +74,8 @@ Route::get('/InputLaporanProposal', [InputLaporanProposalController::class,'inde
 Route::get('/InputLaporanAnggaran', [InputLaporanAnggaranController::class,'index']);
 
 Route::get('/laporanSaya', [laporanSayaController::class,'index']);
+Route::get('/InputLaporanProposal', [laporanSayaController::class,'create']);
+Route::post('store', [laporanSayaController::class,'store']);
 
 Route::get('/user', [PelaporController::class,'index']);
 

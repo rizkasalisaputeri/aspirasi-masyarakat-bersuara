@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\laporanSaya;
+use Illuminate\Support\Str;
+use App\Http\Controllers\Controller;
+
 
 class laporanSayaController extends Controller
 {
@@ -13,7 +16,8 @@ class laporanSayaController extends Controller
      */
     public function index()
     {
-        return view('user/laporanSaya');
+        $dtlaporan = laporanSaya::all();
+        return view('laporan.index', compact(['dtlaporan']));
     }
 
     /**
@@ -23,7 +27,7 @@ class laporanSayaController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.inputLaporanProposal');
     }
 
     /**
@@ -34,7 +38,14 @@ class laporanSayaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        laporanSaya::create([
+            'tanggal' => $request->tgl_laporan,
+            'judul_laporan' => $request->judul_laporan,
+            'isi_laporan' => $request->isi_laporan,
+            'file_laporan' => $request->file_laporan,
+            'remember_token' => Str::random(60),
+        ]);
+        return \redirect('/laporanSaya');
     }
 
     /**
