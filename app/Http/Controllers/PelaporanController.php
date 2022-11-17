@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pelaporan;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePelaporanRequest;
 use App\Http\Requests\UpdatePelaporanRequest;
 
@@ -15,7 +16,8 @@ class PelaporanController extends Controller
      */
     public function index()
     {
-        return view('admin/editLaporan');
+        $pelaporans = Pelaporan::all();
+        return view('admin.editLaporan', compact('pelaporans'));
     }
 
     /**
@@ -25,7 +27,7 @@ class PelaporanController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.createLaporan');
     }
 
     /**
@@ -34,9 +36,16 @@ class PelaporanController extends Controller
      * @param  \App\Http\Requests\StorePelaporanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePelaporanRequest $request)
+    public function storeLaporan(StorePelaporanRequest $request)
     {
-        //
+        Pelaporan::create([
+            'ID_laporan' => $request->id,
+            'judul_laporan' => $request->judul_laporan,
+            'kategori_laporan' => $request->kategori_laporan,
+            'tgl_laporan' => $request->tgl_laporan,
+            'file_laporan' => $request->file_laporan,
+        ]);
+        return \redirect('/editLaporan');
     }
 
     /**

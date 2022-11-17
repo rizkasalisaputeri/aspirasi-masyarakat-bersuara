@@ -4,31 +4,30 @@
                     <div class="container-fluid pt-4 px-4">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Laporan Saya</h6>
+                                <h6 class="mb-0">Laporan</h6>
+                                <a href="createlaporan" class="btn btn-primary">Tambah Laporan</a>
                             </div>
                             <div class="table-responsive">
                                 <table class="table text-start align-middle table-bordered table-hover mb-0">
                                     <thead>
                                         <tr class="text-dark">
-                                            <th scope="col">ID_Laporan</th>
-                                            <th scope="col">User_id</th>
-                                            <th scope="col">Kategori_id</th>
-                                            <th scope="col">Jenis_id</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Action</th>
+                                            <th scope="col">id_laporan</th>
+                                            <th scope="col">judul_laporan</th>
+                                            <th scope="col">kategori_laporan</th>
+                                            <th scope="col">tgl_laporan</th>
+                                            <th scope="col">file_laporan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{-- @foreach ($laporans as $laporan)
+                                        @foreach ($pelaporans as $pelaporan)
                                             <tr>
-                                                <td>{{$laporan->id}}</td>
-                                                <td>{{$laporan->User_id}}</td>
-                                                <td>{{$laporan->Kategori_id}}</td>
-                                                <td>{{$laporan->Jenis_id}}</td>
-                                                <td>{{$laporan->Status}}</td>
-
+                                                <td>{{$pelaporan->id}}</td>
+                                                <td>{{$pelaporan->judul_laporan}}</td>
+                                                <td>{{$pelaporan->kategori_laporan}}</td>
+                                                <td>{{$pelaporan->tgl_laporan}}</td>
+                                                <td>{{$pelaporan->file_laporan}}</td>
                                             </tr>
-                                        @endforeach --}}
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
