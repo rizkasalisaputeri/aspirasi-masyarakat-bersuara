@@ -24,7 +24,7 @@ class inputLaporanAnggaranController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.userInputAnggaran');
     }
 
     /**

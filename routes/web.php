@@ -83,9 +83,9 @@ Route::get('/settingUser', [SettingPelaporController::class,'index']);
 //Admin
 
 Route::get('/admin', [adminController::class, 'showDashAdm']);
-// Route::get('/editUser', [userController::class, 'index']);
-// Route::get('createUser', [userController::class, 'create']);
-// Route::post('store', [userController::class, 'store']);
-Route::resource('user', userController::class);
+Route::get('/editUser', [userController::class, 'index']);
+Route::get('createUser', [userController::class, 'create']);
+Route::post('store', [userController::class, 'store']);
+
 
 Route::get('/editLaporan', [PelaporanController::class, 'index']);

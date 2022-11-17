@@ -13,7 +13,7 @@ class laporanSayaController extends Controller
      */
     public function index()
     {
-        
+        return view('user.laporanSaya');
     }
 
     /**

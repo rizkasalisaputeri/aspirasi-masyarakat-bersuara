@@ -5,7 +5,7 @@
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12">
-                <form action="{{ route(user.store) }}" method="POST">
+                <form action="store" method="POST">
                     @csrf
                     <div class="mb-3">
                       <label for="asal_instansi" style="color:black" class="form-label">Asal Instansi</label>

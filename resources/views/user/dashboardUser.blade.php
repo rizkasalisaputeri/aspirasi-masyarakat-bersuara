@@ -1,7 +1,7 @@
 @extends('layouts.navbarUser')
 
 @section('content')
-                    
+
             <!-- Sale & Revenue Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
@@ -77,7 +77,7 @@
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Laporan Saya</h6>
-                        <a href="/User/Laporan Saya">Show All</a>
+                        <a href="/laporanSaya">Show All</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">

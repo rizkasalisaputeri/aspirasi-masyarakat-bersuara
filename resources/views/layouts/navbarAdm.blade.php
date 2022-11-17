@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="/admin" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/admin" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <a href="/editLaporan" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Edit Laporan</a>
                     <a href="/editUser" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Edit User</a>
                     </div>
