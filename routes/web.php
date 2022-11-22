@@ -90,6 +90,7 @@ Route::get('createUser', [userController::class, 'create']);
 Route::post('store', [userController::class, 'store']);
 
 
+
 Route::get('/editLaporan', [PelaporanController::class, 'index']);
 Route::get('createLaporan', [PelaporanController::class, 'create']);
 Route::post('storeLaporan', [PelaporanController::class, 'store']);
