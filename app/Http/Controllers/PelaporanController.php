@@ -36,7 +36,7 @@ class PelaporanController extends Controller
      * @param  \App\Http\Requests\StorePelaporanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeLaporan(StorePelaporanRequest $request)
+    public function store(StorePelaporanRequest $request)
     {
         Pelaporan::create([
             'ID_laporan' => $request->id,

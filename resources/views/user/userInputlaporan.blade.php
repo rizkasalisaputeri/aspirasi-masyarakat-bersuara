@@ -3,7 +3,7 @@
 @section('content')
                     <div class="col-sm-120 col-xl-60">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Laporan Proposal</h6>
+                            <h6 class="mb-4">Buat Laporan</h6>
                             <form action="store" method="POST">
                                 @csrf
                             <div class="form-floating mb-3">

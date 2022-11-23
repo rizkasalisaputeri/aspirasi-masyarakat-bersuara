@@ -11,8 +11,7 @@ use App\Http\Controllers\PelaporanController;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\laporanSayaController;
 use App\Http\Controllers\SettingPelaporController;
-use App\Http\Controllers\inputLaporanAnggaranController;
-use App\Http\Controllers\inputLaporanProposalController;
+use App\Http\Controllers\inputLaporanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,17 +67,12 @@ Route::post('/regist', [RegistrasiController::class,'create']);
 
 //user
 Route::get('/dashboardUser', [PelaporController::class,'index']);
-
-Route::get('/InputLaporanProposal', [InputLaporanProposalController::class,'index']);
-
-Route::get('/InputLaporanAnggaran', [InputLaporanAnggaranController::class,'index']);
-
+Route::get('/InputLaporanProposal', [InputLaporanController::class,'index']);
+Route::get('/InputLaporanAnggaran', [InputLaporanController::class,'index']);
 Route::get('/laporanSaya', [laporanSayaController::class,'index']);
-Route::get('/InputLaporanProposal', [laporanSayaController::class,'create']);
-Route::post('store', [laporanSayaController::class,'store']);
-
+// Route::get('/InputLaporanProposal', [laporanSayaController::class,'createLaporan']);
+Route::post('storeLaporan', [laporanSayaController::class,'storeLaporan']);
 Route::get('/user', [PelaporController::class,'index']);
-
 Route::get('/settingUser', [SettingPelaporController::class,'index']);
 
 
@@ -86,11 +80,11 @@ Route::get('/settingUser', [SettingPelaporController::class,'index']);
 
 Route::get('/admin', [adminController::class, 'showDashAdm']);
 Route::get('/editUser', [userController::class, 'index']);
-Route::get('createUser', [userController::class, 'create']);
-Route::post('store', [userController::class, 'store']);
+Route::get('createUser', [userController::class, 'createUser']);
+Route::post('storeUser', [userController::class, 'storeUser']);
 
 
 
 Route::get('/editLaporan', [PelaporanController::class, 'index']);
 Route::get('createLaporan', [PelaporanController::class, 'create']);
-Route::post('storeLaporan', [PelaporanController::class, 'store']);
+Route::post('store', [PelaporanController::class, 'store']);

@@ -27,7 +27,7 @@ class laporanSayaController extends Controller
      */
     public function create()
     {
-        return view('user.inputLaporanProposal');
+        return view('user.userInputLaporan');
     }
 
     /**
