@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('pelaporans', function (Blueprint $table) {
             $table->id();
+            $table->string('tanggal');
             $table->string('judul_laporan');
+            $table->string('rangkuman');
             $table->string('kategori_laporan');
-            $table->string('tgl_laporan');
-            $table->binary('file_laporan')->nullable()->default(12);
             $table->timestamps();
         });
     }

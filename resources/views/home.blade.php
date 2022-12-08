@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Masyarakat Bersuara | Home</title>
+    <title>Masyarakat Bersuara</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -73,7 +73,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="/home" class="nav-item nav-link active">Home</a>
+                    <a href="/home" class="nav-item nav-link">Home</a>
                     <a href="/registrasi" class="nav-item nav-link">Registrasi</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Alur dan Syarat</a>
@@ -90,43 +90,13 @@
                         </div>
                     </div>
                     <a href="/contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div>
+                        <a class="btn btn-primary ms-4" href="/login" role="button">Login</a>
+                    </div>
                 </div>
-                <button data-bs-toggle="modal" data-bs-target="#login" class="btn btn-primary py-2 px-4 ms-3">Login</button>
             </div>
         </nav>
-    <!-- Navbar End -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                    <label for="exampleInputUsername" class="form-label">Username</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Saved Password</label>
-                        </div>
-                        <a href="">Forgot Password</a>
-                    </div>
-                    <a href="/user" button type="submit" class="btn btn-primary">Submit</button></a>
-                    <p class="text-center mb-0">Belum punya akun? <a href="/registrasi">Registrasi</a></p>
-                </form>
-            </div>
-        </div>
-        </div>
     </div>
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -164,7 +134,7 @@
         </div>
     </div>
     <!-- Navbar & Carousel End -->
-
+    <!-- Navbar End -->
 
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
@@ -348,110 +318,110 @@
     </div>
     <!-- Service End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row gx-5">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                        <a href="/home" class="navbar-brand">
-                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Home</h1>
-                        </a>
-                        <p class="mt-3 mb-4">Terimakasih telah mengunjungi website Masyarakat Bersuara. Silahkan daftarkan diri dan suarakan aspirasi Anda</p>
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                <button class="btn btn-dark">Sign Up</button>
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-md-6 footer-about">
+                        <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                            <a href="/home" class="navbar-brand">
+                                <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Home</h1>
+                            </a>
+                            <p class="mt-3 mb-4">Terimakasih telah mengunjungi website Masyarakat Bersuara. Silahkan daftarkan diri dan suarakan aspirasi Anda</p>
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                    <button class="btn btn-dark">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6">
+                        <div class="row gx-5">
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">More Info</h3>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                                    <p class="mb-0">Jl. Yos Sudarso No.18 - 22, Kota Surabaya</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-envelope-open text-primary me-2"></i>
+                                    <p class="mb-0">Bersuara@example.com</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-telephone text-primary me-2"></i>
+                                    <p class="mb-0">72022714</p>
+                                </div>
+                                <div class="d-flex mt-4">
+                                    <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                    <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                                </div>
                             </div>
-                        </form>
+                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Quick Links</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Alur dan Syarat</a>
+                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Registrasi</a>
+                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Pelaporan</a>
+                                    <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Popular Links</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Alur dan Syarat</a>
+                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Pelaporan</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-6">
-                    <div class="row gx-5">
-                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">More Info</h3>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">Jl. Yos Sudarso No.18 - 22, Kota Surabaya</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-envelope-open text-primary me-2"></i>
-                                <p class="mb-0">Bersuara@example.com</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">72022714</p>
-                            </div>
-                            <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Quick Links</h3>
-                            </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Alur dan Syarat</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Registrasi</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Pelaporan</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Popular Links</h3>
-                            </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Alur dan Syarat</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Pelaporan</a>
-                            </div>
+            </div>
+        </div>
+        <div class="container-fluid text-white" style="background: #061429;">
+            <div class="container text-center">
+                <div class="row justify-content-end">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                            <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Masyarakat Bersuara 2022</a>. All Rights Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed by Tasya dan Rizka</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid text-white" style="background: #061429;">
-        <div class="container text-center">
-            <div class="row justify-content-end">
-                <div class="col-lg-8 col-md-6">
-                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Masyarakat Bersuara 2022</a>. All Rights Reserved. 
-						
-						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-						Designed by Tasya dan Rizka</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 
-</html>
+    </html>

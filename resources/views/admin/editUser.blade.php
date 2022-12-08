@@ -11,7 +11,7 @@
                                 <table class="table text-start align-middle table-bordered table-hover mb-0">
                                     <thead>
                                         <tr class="text-dark">
-                                            <th scope="col">id user</th>
+                                            <th scope="col">ID user</th>
                                             <th scope="col">Asal Instansi</th>
                                             <th scope="col">Nama Depan</th>
                                             <th scope="col">Nama Belakang</th>
@@ -31,7 +31,6 @@
                                                 <td>{{$crU->alamat}}</td>
                                                 <td>{{$crU->email}}</td>
                                                 <td>{{$crU->password}}</td>
-
                                             </tr>
                                         @endforeach
                                     </tbody>

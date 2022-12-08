@@ -182,7 +182,7 @@ h6,
         border-bottom: 1px solid rgba(256, 256, 256, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-dark {
         position: fixed;
         background: #FFFFFF;
@@ -492,14 +492,14 @@ h6,
 }
 .gradient-custom-2 {
     background: #607EAA;
-    
+
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right, #16213E, #1C3879, #607EAA, #0F3460);
-    
+
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, #16213E, #1C3879, #607EAA, #0F3460);
     }
-    
+
     @media (min-width: 768px) {
     .gradient-form {
     height: 100vh !important;
@@ -511,5 +511,24 @@ h6,
     border-bottom-right-radius: .3rem;
     }
     }
+    .form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
 
-    
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+

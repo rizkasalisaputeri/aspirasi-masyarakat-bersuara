@@ -18,6 +18,7 @@ class PelaporanController extends Controller
     {
         $pelaporans = Pelaporan::all();
         return view('admin.editLaporan', compact('pelaporans'));
+
     }
 
     /**
@@ -38,14 +39,14 @@ class PelaporanController extends Controller
      */
     public function store(StorePelaporanRequest $request)
     {
-        Pelaporan::create([
-            'ID_laporan' => $request->id,
-            'judul_laporan' => $request->judul_laporan,
-            'kategori_laporan' => $request->kategori_laporan,
-            'tgl_laporan' => $request->tgl_laporan,
-            'file_laporan' => $request->file_laporan,
+        $validatedData = $request->validate([
+            'tanggal' => 'required',
+            'judul_laporan' => 'required',
+            'rangkuman' => 'required',
+            'kategori_laporan' => 'required',
+            'file' => 'required|mimes:pdf|max:2048',
         ]);
-        return \redirect('/editLaporan');
+        dd('berhasil');
     }
 
     /**

@@ -20,13 +20,13 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($pelaporans as $pelaporan)
-                                            <tr>
-                                                <td>{{$pelaporan->id}}</td>
-                                                <td>{{$pelaporan->judul_laporan}}</td>
-                                                <td>{{$pelaporan->kategori_laporan}}</td>
-                                                <td>{{$pelaporan->tgl_laporan}}</td>
-                                                <td>{{$pelaporan->file_laporan}}</td>
-                                            </tr>
+                                        <tr>
+                                            <td>{{$pelaporan->id}}</td>
+                                            <td>{{$pelaporan->tanggal}}</td>
+                                            <td>{{$pelaporan->judul_laporan}}</td>
+                                            <td>{{$pelaporan->rangkuman}}</td>
+                                            <td>{{$pelaporan->kategori_laporan}}</td>
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>

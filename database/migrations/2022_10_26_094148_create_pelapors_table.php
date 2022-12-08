@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('pelapors', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_pelapor');
-            $table->string('nik_pelapor');
-            $table->string('email_pelapor');
-            $table->string('nohp_pelapor');
-            $table->boolean('jk_pelapor')->nullable()->default(false);
+            $table->string('asal_instansi');
+            $table->string('nama_depan');
+            $table->string('nama_belakang');
+            $table->string('alamat');
+            $table->string('email');
+            $table->string('password');
             $table->timestamps();
         });
     }

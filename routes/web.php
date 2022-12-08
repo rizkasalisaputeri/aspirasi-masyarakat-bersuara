@@ -4,14 +4,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\PelaporController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PelaporanController;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\laporanSayaController;
-use App\Http\Controllers\SettingPelaporController;
 use App\Http\Controllers\inputLaporanController;
+use App\Http\Controllers\SettingPelaporController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,25 +55,24 @@ Route::get('/alur-dan-syarat', function () {
     return view('alur-dan-syarat');
 });
 
-
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [LoginController::class,'index']);
+Route::post('/login', [LoginController::class,'authenticate']);
 
 Route::get('/verifikasi', function () {
     return view('verifikasi');
 });
 
-Route::get('/regist', [RegistrasiController::class,'index']);
-Route::post('/regist', [RegistrasiController::class,'create']);
+Route::get('/regist', [RegisterController::class,'index']);
+Route::post('/regist', [RegisterController::class,'store']);
 
 //user
 Route::get('/dashboardUser', [PelaporController::class,'index']);
 Route::get('/InputLaporanProposal', [InputLaporanController::class,'index']);
 Route::get('/InputLaporanAnggaran', [InputLaporanController::class,'index']);
 Route::get('/laporanSaya', [laporanSayaController::class,'index']);
-// Route::get('/InputLaporanProposal', [laporanSayaController::class,'createLaporan']);
-Route::post('storeLaporan', [laporanSayaController::class,'storeLaporan']);
+
+Route::get('create', [laporanSayaController::class,'create']);
+Route::post('store', [laporanSayaController::class,'store']);
 Route::get('/user', [PelaporController::class,'index']);
 Route::get('/settingUser', [SettingPelaporController::class,'index']);
 
@@ -80,8 +81,8 @@ Route::get('/settingUser', [SettingPelaporController::class,'index']);
 
 Route::get('/admin', [adminController::class, 'showDashAdm']);
 Route::get('/editUser', [userController::class, 'index']);
-Route::get('createUser', [userController::class, 'createUser']);
-Route::post('storeUser', [userController::class, 'storeUser']);
+Route::get('createUser', [userController::class, 'create']);
+Route::post('storeUser', [userController::class, 'store']);
 
 
 

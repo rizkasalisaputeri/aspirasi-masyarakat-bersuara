@@ -17,14 +17,14 @@ class userController extends Controller
     public function index()
     {
         $crUser = User::all();
-        return view('user.index', compact(['crUser']));
+        return view('admin.editUser', compact(['crUser']));
     }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function createUser()
+    public function create()
     {
         return view('admin.createUser');
     }
@@ -35,19 +35,17 @@ class userController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeUser(Request $request)
+    public function store(Request $request)
     {
-        User::create([
-            'id_user' => $request->name,
-            'asal_instansi' => $request->asal_instansi,
-            'nama_depan' => $request->nama_depan,
-            'nama_belakang' => $request->nama_belakang,
-            'alamat' => $request->alamat,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'remember_token' => Str::random(60),
+        $validatedData = $request->validate([
+            'asal_instansi'=> 'required',
+            'nama_depan'=> 'required',
+            'nama_belakang'=> 'required',
+            'alamat'=> 'required',
+            'email'=> 'required|email:dns',
+            'password'=> 'required|min:8|max:100'
         ]);
-        return \redirect('/editUser');
+        dd('berhasil');
     }
 
     /**

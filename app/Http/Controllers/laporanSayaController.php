@@ -38,14 +38,19 @@ class laporanSayaController extends Controller
      */
     public function store(Request $request)
     {
-        laporanSaya::create([
-            'tanggal' => $request->tgl_laporan,
-            'judul_laporan' => $request->judul_laporan,
-            'isi_laporan' => $request->isi_laporan,
-            'file_laporan' => $request->file_laporan,
-            'remember_token' => Str::random(60),
+        $validatedData = $request->validate([
+            'tanggal' => 'required',
+            'judul_laporan' => 'required',
+            'rangkuman' => 'required',
+            'kategori_laporan' => 'required',
+            'file' => 'required|mimes:pdf|max:2048',
         ]);
-        return \redirect('/laporanSaya');
+
+        laporanSaya::create($validateData);
+        // Pelaporan::create($validatedData);
+
+        // return redirect('/laporanSaya');
+
     }
 
     /**

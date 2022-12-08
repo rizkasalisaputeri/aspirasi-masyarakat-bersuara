@@ -35,7 +35,19 @@ class inputLaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'tanggal' => 'required',
+            'judul_laporan' => 'required',
+            'rangkuman' => 'required',
+            'kategori_laporan' => 'required',
+            'file' => 'required|mimes:pdf|max:2048',
+        ]);
+        dd('berhasil');
+
+
+        // Pelaporan::create($validatedData);
+
+        // return redirect('/laporanSaya');
     }
 
     /**
