@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 class homeController extends Controller
 {
-    public function showHome()
+    public function index()
     {
         return view('home');
     }
@@ -19,13 +19,13 @@ class homeController extends Controller
     {
         return view('contact');
     }
-    
+
     public function showPelaporan()
     {
         return view('pelaporan');
     }
 
-    public function showRegistrasi()    
+    public function showRegistrasi()
     {
         return view('regist');
     }

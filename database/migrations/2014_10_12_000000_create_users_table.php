@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->text('alamat');
             $table->string('password');
+            $table->string('utype')->default('user');
+            // $table->string('utype')->default('USR')->comment('ADM for Admin and USR for User or Pelapor');
             $table->rememberToken();
             $table->timestamps();
         });

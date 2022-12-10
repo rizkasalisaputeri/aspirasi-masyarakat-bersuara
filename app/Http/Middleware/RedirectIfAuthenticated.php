@@ -19,14 +19,25 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        $guards = empty($guards) ? [null] : $guards;
+        // $guards = empty($guards) ? [null] : $guards;
 
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+        // foreach ($guards as $guard) {
+        //     if (Auth::guard($guard)->check()) {
+        //         return redirect(RouteServiceProvider::HOME);
+
+        //     }
+        // }
+        // dd(Auth::user()->utype );
+        if(Auth::check()){
+            if (Auth::user()->utype == 'admin'){
+                return redirect('/admin');
+            }
+            else {
+                return redirect('/dashboardUser');
             }
         }
 
-        return $next($request);
+            return $next($request);
+        
     }
 }

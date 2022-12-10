@@ -14,7 +14,15 @@ class PelaporanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function showLaporan()
+    {
+        return view('alur-dan-syarat',[
+            "active"=>'alur'
+        ]);
+
+    }
+
+     public function index()
     {
         $pelaporans = Pelaporan::all();
         return view('admin.editLaporan', compact('pelaporans'));

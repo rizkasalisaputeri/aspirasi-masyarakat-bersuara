@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('pelaporans', function (Blueprint $table) {
             $table->id();
-            $table->string('tanggal');
             $table->string('judul_laporan');
             $table->string('rangkuman');
-            $table->string('kategori_laporan');
+            $table->foreignId('kategori_id');
+            $table->foreignId('instansi_id');
+            $table->foreignId('user_id');
+            $table->timestamp('tanggal')->nullable();
             $table->timestamps();
         });
     }

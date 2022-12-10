@@ -16,15 +16,26 @@ class LoginController extends Controller
     public function authenticate(Request $request){
         // $credentials =
         $request->validate([
-            'email' => 'required|email.dns',
+            'email' => 'required|email:dns',
             'password' => 'required'
         ]);
 
-        // if(Auth::attempt($credentials)){
-        //     $request->session()->regenerate();
-        // }
+        if (Auth::attempt(array('email' => $request->email, 'password' => $request->password, 'utype' => 'user'))) {
+            $request->session()->regenerate();
+            return redirect('/dashboardUser');
+        }else if (Auth::attempt(array('email' => $request->email, 'password' => $request->password, 'utype' => 'admin'))) {
+            $request->session()->regenerate();
+            return redirect('/admin');
+        }
 
+        return back()->with('salah', 'Silahkan cek kembali email atau password anda')->with('email', $request->email);
 
-        dd('berhasil login');
+    }
+    public function logout(Request $req)
+    {
+        Auth::logout();
+        $req->session()->invalidate();
+        $req->session()->regenerateToken();
+        return redirect('/');
     }
 }

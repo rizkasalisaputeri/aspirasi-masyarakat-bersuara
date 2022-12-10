@@ -13,12 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('laporanSaya', function (Blueprint $table) {
+        Schema::create('laporan_sayas', function (Blueprint $table) {
             $table->id();
-            $table->string('tanggal');
             $table->string('judul_laporan');
+            $table->string('status')->default('Belum Diverifikasi');
             $table->string('rangkuman');
-            $table->string('kategori_laporan');
+            $table->foreignId('kategori_id');
+            $table->foreignId('instansi_id');
+            $table->foreignId('user_id');
+            $table->timestamp('tanggal')->nullable();
             $table->timestamps();
         });
     }

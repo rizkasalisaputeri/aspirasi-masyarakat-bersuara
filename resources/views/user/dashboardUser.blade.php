@@ -1,7 +1,23 @@
 @extends('layouts.navbarUser')
 
 @section('content')
-
+</div>
+<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 900px;">
+                    <h1 class="display-1 text-white mb-md-4 animated zoomIn">Selamat Datang!</h1>
+                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Anda telah berhasil login silahkan buat laporan</h5>
+                    <a href="buatLaporan" class="btn btn-outline-light py-md-3 px-md-5 animated slideInCenter">Buat Laporan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Navbar & Carousel End -->
             <!-- Sale & Revenue Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
@@ -44,33 +60,6 @@
                 </div>
             </div>
             <!-- Sale & Revenue End -->
-
-
-            <!-- Sales Chart Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Laporan masuk bulan ini</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="worldwide-sales"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Total laporan tahun ini</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="salse-revenue"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sales Chart End -->
-
 
             <!-- Recent Sales Start -->
             <div class="container-fluid pt-4 px-4">

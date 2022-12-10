@@ -74,7 +74,10 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="/home" class="nav-item nav-link">Home</a>
+                    @if (!Auth::check())
+
                     <a href="/registrasi" class="nav-item nav-link">Registrasi</a>
+                    @endif
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Alur dan Syarat</a>
                         <div class="dropdown-menu m-0">
@@ -92,7 +95,23 @@
                     <a href="/contact" class="nav-item nav-link">Contact</a>
                     </div>
                     <div>
+                        @if (!Auth::check())
                         <a class="btn btn-primary ms-4" href="/login" role="button">Login</a>
+                        @else
+                        <div class="nav=item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu text-small shadow">
+                              <li><a class="dropdown-item" href="#">New project...</a></li>
+                              <li><a class="dropdown-item" href="#">Settings</a></li>
+                              <li><a class="dropdown-item" href="#">Profile</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="/logout">Sign out</a></li>
+                            </ul>
+                        </div>
+                        @endif
+
                     </div>
                 </div>
             </div>
@@ -317,6 +336,243 @@
         </div>
     </div>
     <!-- Service End -->
+
+    <!-- Instansi Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Instansi</h5>
+                <h1 class="mb-0">Bekerja sama dengan instansi di Pemerintah Daerah Surabaya</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Pendidikan</h4>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Jagir Wonokromo No. 356 Surabaya
+                        Telp. (031) 8418904
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Kesehatan</h4>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Jemursari No. 197 Surabaya
+                        Telp. (031) 8439473, 8439372
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Sumber Daya Air dan Bina Marga</h4>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Jimerto No. 6-8 Surabaya
+                        Telp. (031) 5343051-57
+                        Psw. 153
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Perumahan Rakyat dan Kawasan Permukiman Serta Pertanahan
+                            </h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Jimerto No. 8 Surabaya
+                        Telp. (031) 5343051-57
+                        Telp. (031) 5312144 Psw. 533
+                        Telp. (031) 5461865
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Pemadam Kebakaran dan Penyelamatan
+                            </h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Pasar Turi No. 21 Surabaya
+                        Telp. (031) 3533843
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Sosial</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Arief Rahman Hakim No. 131-133 Surabaya
+                        Telp. (031) 59174416
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Perindustrian dan Tenaga Kerja</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Tunjungan No. 1-3 (Eks. Gedung Siola)
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Pemberdayaan Perempuan dan Perlindungan Anak serta Pengendalian Penduduk dan Keluarga Berencana</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Kedungsari No. 18 Surabaya
+                        Telp. (031) 5346317 Faks (031) 5480904
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Ketahanan Pangan dan Pertanian</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Pagesangan II / No. 56 Surabaya
+                        Telp. (031) 8282328
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Lingkungan Hidup</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                    Alamat :
+                    Jalan Menur 31 A Surabaya
+                    Telp. 031-5967387
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Kependudukan dan Pencatatan Sipil</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Tunjungan No. 1-3 (Eks. Gedung Siola)
+                        Telepon : (031) 531 8916, 531 8917, 531 8835
+                        Ext. 8001,8002,8003,8004,8005,8006,8007,8008
+                        Fax : (031) 531 8856
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Perhubungan</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Dukuh Menanggal No.1 Surabaya
+                        Telp. (031) 8295335, 8295324 Psw. 10
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Komunikasi dan Informatika</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Jimerto 25-27 Lt. V Surabaya
+                        Telp. (031) 5312144 Psw. 522
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Koperasi Usaha Kecil dan Menengah dan Perdagangan</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jl. Tunjungan No. 1-3 lt.3 (ex Gedung Siola)
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Tunjungan No. 1-3 (Eks Gedung Siola)
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Kebudayaan, Kepemudaan dan Olah Raga serta Pariwisata</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Tunjungan No.1-3 (Eks. Gedung Siola)
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Dinas Perpustakaan dan Kearsipan</h4>
+
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Alamat :
+                        Jalan Dukuh Kupang Barat I / No. 1 B Surabaya
+                        Telp. (031) 5679770
+                        Jalan Rungkut Asri Tengah No. 5 - 7 Surabaya
+                        Telp. (031) 8707329
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Instansi End -->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">

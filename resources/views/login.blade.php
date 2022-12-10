@@ -1,5 +1,10 @@
 @extends('layouts.navbarWeb')
 
+@if (session()->has('email') )
+<script>
+  alert('terserah ya')
+  </script>
+@endif
 @section('content')
 </div>
 </div>
@@ -18,7 +23,7 @@
     @csrf
     <div class="form-floating">
       <input type="email" class="form-control @error('email') is-invalid
-      @enderror"  id="email" placeholder="name@example.com" autofocus required>
+      @enderror"  id="email" name="email" value="{{ session('email') }}" placeholder="name@example.com" autofocus required>
       <label for="email">Email</label>
       @error('email')
         <div class="invalid-feedback">
@@ -28,7 +33,7 @@
     </div>
     <div class="form-floating">
       <input type="password" class="form-control @error('password') is-invalid
-      @enderror"  id="email" id="password" placeholder="Password" required>
+      @enderror"  name="password" id="password" placeholder="Password" required>
       <label for="password">Password</label>
       @error('password')
         <div class="invalid-feedback">
