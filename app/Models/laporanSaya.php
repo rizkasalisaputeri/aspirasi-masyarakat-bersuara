@@ -12,10 +12,7 @@ class laporanSaya extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
-    // public function kategori_laporan()
-    // {
-    // return $this->belongsTo(kategori_laporan::class,'ka');
-    // }
+    
     public function instansi()
     {
         return $this->belongsTo(instansi::class);

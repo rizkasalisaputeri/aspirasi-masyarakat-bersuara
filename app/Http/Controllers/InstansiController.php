@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\instansi;
-use App\Http\Requests\StoreinstansiRequest;
-use App\Http\Requests\UpdateinstansiRequest;
+use Illuminate\Http\Request;
+use App\Http\Requests\StoreInstansiRequest;
+use App\Http\Requests\UpdateInstansiRequest;
 
 class InstansiController extends Controller
 {
@@ -15,10 +16,7 @@ class InstansiController extends Controller
      */
     public function index()
     {
-        return view('home', [
-            // 'nama' => 'Instansi',
-            'instansis' => Instansi::all()
-        ]);
+        //
     }
 
     /**
@@ -26,20 +24,27 @@ class InstansiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createInstansi()
     {
-        //
+        return view('admin.createInstansi');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreinstansiRequest  $request
+     * @param  \App\Http\Requests\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreinstansiRequest $request)
+    public function storeInstansi(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama'=> 'required',
+            'alamat'=> 'required',
+            'telp'=>'nullable',
+        ]);
+        instansi::create($validatedData);
+        $request->session()->flash('success', 'Instansi berhasil ditambahkan!');
+        return redirect('/editInstansi');
     }
 
     /**

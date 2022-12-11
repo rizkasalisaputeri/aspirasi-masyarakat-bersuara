@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\userDash;
+use App\Models\Pelaporan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class dashUserController extends Controller
 {
@@ -14,7 +16,8 @@ class dashUserController extends Controller
      */
     public function index()
     {
-        return view('user.dashboardUser');
+        $dtlaporan = Pelaporan::where('user_id',Auth::user()->id)->with(['kategori_laporan','instansi'])->get();
+        return view('user.dashboardUser', compact(['dtlaporan']));
     }
 
     public function userAlurdanSyarat()

@@ -9,6 +9,8 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\PelaporController;
+use App\Http\Controllers\dashUserController;
+use App\Http\Controllers\InstansiController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PelaporanController;
@@ -16,7 +18,6 @@ use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\laporanSayaController;
 use App\Http\Controllers\inputLaporanController;
 use App\Http\Controllers\SettingPelaporController;
-use App\Http\Controllers\dashUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -88,26 +89,43 @@ Route::group(['middleware'=>['auth','ceklevel:user']],function ()
     Route::get('/pelaporan-user', [dashUserController::class,'userPelaporan']);
 
     //laporansaya
-    Route::get('/laporanSaya', [laporanSayaController::class,'index']);
-    Route::get('buatLaporan', [LaporanSayaController::class,'create']);
-    // Route::post('storeLaporan', [LaporanSayaController::class, 'store']);
+    Route::get('/laporanSaya', [PelaporanController::class,'index']);
+    Route::get('buatLaporan', [PelaporanController::class,'create']);
+    // Route::post('storeLaporan', [PelaporanController::class, 'store']);
 
 
-    // Route::get('create', [laporanSayaController::class,'create']);
-    Route::post('/store', [laporanSayaController::class,'store']);
+    // Route::get('create', [PelaporanController::class,'create']);
+    Route::post('/store', [PelaporanController::class,'store']);
 // Route::get('/user', [PelaporController::class,'index']);
     Route::get('/settingUser', [SettingPelaporController::class,'index']);
 });
 //Admin
 Route::group(['middleware'=>['auth','ceklevel:admin']],function ()
 {
-    Route::post('/hapus-laporan', [laporanSayaController::class ,'hapuslaporan']);
-    Route::post('/update-laporan', [laporanSayaController::class ,'updatelaporan']);
+    //dashboard
 Route::get('/admin', [adminController::class, 'showDashAdm']);
-Route::get('/editUser', [userController::class, 'index']);
-Route::get('createUser', [userController::class, 'create']);
-Route::post('storeUser', [userController::class, 'store']);
-Route::get('/editLaporan', [LaporanSayaController::class, 'indexAdm']);
-Route::get('createLaporan', [PelaporanController::class, 'create']);
-Route::post('/storeadmin', [PelaporanController::class, 'store']);
+
+    //laporan
+Route::get('/editLaporan', [PelaporanController::class, 'indexAdm']);
+Route::post('/hapus-laporan', [PelaporanController::class ,'hapuslaporan']);
+Route::post('/update-laporan', [PelaporanController::class ,'updatelaporan']);
+
+    //user
+Route::get('/editUser', [adminController::class, 'editUser']);
+Route::get('createUser', [userController::class,'createUser']);
+Route::post('storeUser', [userController::class,'storeUser']);
+Route::post('/hapusUser', [adminController::class, 'hapusUser']);
+Route::post('/updateUser', [adminController::class, 'updateUser']);
+
+    //instansi
+Route::get('/editInstansi', [adminController::class, 'editInstansi']);
+Route::get('createInstansi', [InstansiController::class,'createInstansi']);
+Route::post('storeInstansi', [InstansiController::class,'storeInstansi']);
+Route::post('/hapusInstansi', [adminController::class, 'hapusInstansi']);
+Route::post('/updateInstansi', [adminController::class, 'updateInstansi']);
+
+    //kategori
+Route::get('/editKategori', [adminController::class, 'editKategori']);
+Route::post('/updateKategori', [adminController::class, 'updateKategori']);
+Route::post('/hapusKategori', [adminController::class, 'hapusKategori']);
 });

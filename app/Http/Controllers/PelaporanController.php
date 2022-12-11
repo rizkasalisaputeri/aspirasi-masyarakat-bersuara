@@ -1,104 +1,67 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\instansi;
 use App\Models\Pelaporan;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Models\kategori_laporan;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePelaporanRequest;
-use App\Http\Requests\UpdatePelaporanRequest;
+use Illuminate\Support\Facades\Auth;
 
 class PelaporanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function showLaporan()
+    public function index()
     {
-        return view('alur-dan-syarat',[
-            "active"=>'alur'
+        $dtlaporan = Pelaporan::where('user_id',Auth::user()->id)->with(['kategori_laporan','instansi'])->get();
+        return view('user.laporanSaya', compact(['dtlaporan']));
+    }
+
+    public function indexAdm()
+    {
+        $pelaporans = Pelaporan::with(['kategori_laporan','instansi'])->get();
+        return view('admin.editLaporan', compact(['pelaporans']));
+    }
+
+    public function hapuslaporan()
+    {
+        Pelaporan::find(request('idlaporan'))->delete();
+        return back()->withSuccess('Laporan berhasil dihapus');
+    }
+
+    public function updatelaporan()
+    {
+        Pelaporan::find(request('idlaporan'))->update([
+            'judul_laporan'=>request('judul_laporan'),
+
         ]);
-
+        return back()->withSuccess('Laporan berhasil di update');
     }
 
-     public function index()
-    {
-        $pelaporans = Pelaporan::all();
-        return view('admin.editLaporan', compact('pelaporans'));
-
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        return view('admin.createLaporan');
+        $instansi = instansi::all();
+        $kategori = kategori_laporan::all();
+        return view('user.userInputLaporan',[
+            'kategori'=>$kategori,
+            'instansi'=>$instansi,
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorePelaporanRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StorePelaporanRequest $request)
+    public function store(Request $request)
     {
         $validatedData = $request->validate([
             'tanggal' => 'required',
             'judul_laporan' => 'required',
             'rangkuman' => 'required',
-            'kategori_laporan' => 'required',
-            'file' => 'required|mimes:pdf|max:2048',
+            'kategori_id' => 'required',
+            'instansi_id' => 'required',
+            // 'file' => 'required|mimes:pdf'
         ]);
-        dd('berhasil');
-    }
+        $validatedData['user_id'] = Auth::user()->id;
+        Pelaporan::create($validatedData);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Pelaporan  $pelaporan
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Pelaporan $pelaporan)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Pelaporan  $pelaporan
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Pelaporan $pelaporan)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatePelaporanRequest  $request
-     * @param  \App\Models\Pelaporan  $pelaporan
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdatePelaporanRequest $request, Pelaporan $pelaporan)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Pelaporan  $pelaporan
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Pelaporan $pelaporan)
-    {
-        //
+        return redirect('/laporanSaya');
     }
 }

@@ -345,18 +345,18 @@
                 <h1 class="mb-0">Bekerja sama dengan instansi di Pemerintah Daerah Surabaya</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                {{-- @foreach ($intansis as $instansi)
                 <div class="testimonial-item bg-light my-4">
                     <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                         <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Pendidikan</h4>
+                            <h4 class="text-primary mb-1">{{ $instansi->nama }}</h4>
                         </div>
                     </div>
                     <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Jagir Wonokromo No. 356 Surabaya
-                        Telp. (031) 8418904
+                        {{ $instansi->alamat }}
                     </div>
                 </div>
+                @endforeach --}}
                 <div class="testimonial-item bg-light my-4">
                     <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                         <div class="ps-4">

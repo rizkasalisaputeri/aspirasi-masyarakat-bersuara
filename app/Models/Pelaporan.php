@@ -2,22 +2,25 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Pelaporan extends Model
 {
-    use HasFactory;
-
     protected $guarded = ['id'];
 
-    public function kategori_laporan()
+    public function instansi()
     {
-        return $this->belongsTo(kategori_laporan::class);
+        return $this->belongsTo(instansi::class);
     }
-
-    public function user()
+    /**
+     * Get the kategori_laporan that owns the laporanSaya
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function kategori_laporan(): BelongsTo
     {
-        return $this->belongsTo(user::class);
+        return $this->belongsTo(kategori_laporan::class, 'kategori_id');
     }
 }

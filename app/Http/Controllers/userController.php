@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class userController extends Controller
 {
@@ -24,7 +25,7 @@ class userController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createUser()
     {
         return view('admin.createUser');
     }
@@ -35,17 +36,20 @@ class userController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeUser(Request $request)
     {
-        $validatedData = $request->validate([
-            'asal_instansi'=> 'required',
-            'nama_depan'=> 'required',
-            'nama_belakang'=> 'required',
-            'alamat'=> 'required',
-            'email'=> 'required|email:dns',
-            'password'=> 'required|min:8|max:100'
-        ]);
-        dd('berhasil');
+            $validatedData = $request->validate([
+                'asal_instansi'=> 'required',
+                'nama_depan'=> 'required',
+                'nama_belakang'=> 'required',
+                'alamat'=> 'required',
+                'email'=> 'required|email:dns',
+                'password'=> 'required|min:8|max:100'
+            ]);
+            $validatedData['user_id'] = Auth::user()->id;
+            User::create($validatedData);
+            $request->session()->flash('success', 'Registrasi berhasil! Silahkan login');
+            return redirect('/editUser');
     }
 
     /**

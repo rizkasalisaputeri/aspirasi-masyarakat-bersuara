@@ -13,10 +13,11 @@ class kategori_laporan extends Model
 
     protected $guarded =['id'];
 
-    public function pelaporan()
+    public function Pelaporan()
     {
         return this->hasMany(Pelaporan::class);
     }
+    
     public function laporanSaya()
     {
         return this->hasMany(laporanSaya::class);
