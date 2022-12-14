@@ -74,10 +74,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="/home" class="nav-item nav-link">Home</a>
-                    @if (!Auth::check())
-
                     <a href="/registrasi" class="nav-item nav-link">Registrasi</a>
-                    @endif
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Alur dan Syarat</a>
                         <div class="dropdown-menu m-0">
@@ -95,24 +92,18 @@
                     <a href="/contact" class="nav-item nav-link">Contact</a>
                     </div>
                     <div>
-                        @if (!Auth::check())
                         <a class="btn btn-primary ms-4" href="/login" role="button">Login</a>
-                        @else
-                        <div class="nav=item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                            </a>
-                            <ul class="dropdown-menu text-small shadow">
-                              <li><a class="dropdown-item" href="#">New project...</a></li>
-                              <li><a class="dropdown-item" href="#">Settings</a></li>
-                              <li><a class="dropdown-item" href="#">Profile</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="/logout">Sign out</a></li>
-                            </ul>
                         </div>
-                        @endif
-
-                    </div>
+                            @if(Route::has('login'))
+                                @auth
+                                    @if(Auth::user()->utype=='ADM')
+                                    <link rel="stylesheet" href="/admin">
+                                    @else
+                                    <link rel="stylesheet" href="/dashboardUser">
+                                    @endif
+                                @endauth
+                            @endif
+                        </div>
                 </div>
             </div>
         </nav>
@@ -123,8 +114,8 @@
                     <img class="w-100" src="img/carousel-1.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Laporan Proposal</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Laporan Anggaran</h1>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ $kat1->nama }}</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">{{ $kat2->nama }}</h1>
                             <a href="/contact" class="btn btn-outline-light py-md-3 px-md-5 animated slideInCenter">Contact Us</a>
                         </div>
                     </div>
@@ -133,8 +124,8 @@
                     <img class="w-100" src="img/carousel-2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Laporan Anggaran</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Laporan Proposal</h1>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ $kat2->nama }}</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">{{ $kat1->nama }}</h1>
                             <a href="/contact" class="btn btn-outline-light py-md-3 px-md-5 animated slideInCenter">Contact Us</a>
                         </div>
                     </div>
@@ -226,13 +217,12 @@
                         <h5 class="fw-bold text-primary text-uppercase">Masyarakat Bersuara</h5>
                         <h1 class="mb-0">About Us</h1>
                     </div>
-                    <p class="mb-4">Dengan adanya Platform Bersuara ini, maka masyarakat tidak hanya
+                    <p class="mb-4">Masyarakat Bersuara adalah sarana aspirasi dan pengaduan yang mengintegrasikan sistem pengelolaan pengaduan pelayanan publik
+                        yang bekerjasama dengan berbagai instansi di Kota Surabaya.
+                        Dengan adanya Platform Bersuara ini, maka masyarakat tidak hanya
                         dapat menyuarakan aspirasi, namun juga dapat selalu memantau perkembangan dari suatu
-                        aspirasi tersebut. Karena Platform ini akan selalu update perkembangan segala aspirasi baik
-                        yang belum diambil alih pemerintah maupun yang sudah dalam tahap pelaksanaan. Dengan
-                        diselenggarakannya Musrenbang dengan memanfaatkan media online tentu akan
-                        memudahkan proses perencanaan yang melibatkan masyarakat luas dan tetap mematuhi
-                        protokol Kesehatan.</p>
+                        aspirasi tersebut. Karena Platform ini akan selalu update perkembangan segala aspirasi dan pengaduan tersebut.
+                         </p>
                     <div class="row g-0 mb-3">
                     </div>
                     <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
@@ -262,19 +252,18 @@
                     <div class="blog-item bg-light rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Laporan</a>
+                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Kategori Laporan</a>
                         </div>
                         <div class="p-4">
-                            <h4 class="mb-3">Pelaporan Proposal</h4>
-                            <p>Untuk Proposal, Seseorang bisa mendaftarkan diri baik secara individu
-                                maupun kelompok untuk mengirimkan suatu proposal...</p>
+                            <h4 class="mb-3">{{ $kat1->nama }}</h4>
+                            <p>{{ $kat1->excerpt }}</p>
                             <a class="text-uppercase" href="/laporan-proposal">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
                     <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-                        <h3 class="text-white mb-3">Laporan</h3>
+                        <h3 class="text-white mb-3">Kategori Laporan</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
@@ -284,9 +273,8 @@
                             <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Laporan</a>
                         </div>
                         <div class="p-4">
-                            <h4 class="mb-3">Pelaporan Anggaran</h4>
-                            <p>Mekanisme input partisipasi warga yang
-                                mempunyai pengaruh langsung pada keputusan anggaran...</p>
+                            <h4 class="mb-3">{{ $kat2->nama }}</h4>
+                            <p>{{ $kat2->excerpt }}</p>
                             <a class="text-uppercase" href="/laporan-anggaran">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
@@ -308,8 +296,8 @@
                         <div class="service-icon">
                             <i class="fab fa-android text-white"></i>
                         </div>
-                        <h4 class="mb-3">Alur Pelaporan</h4>
-                        <p class="m-0">Alur proses pelaporan masyarakat secara online.</p>
+                        <h4 class="mb-3">{{ $alur->nama }}</h4>
+                        <p class="m-0">{{ $alur->excerpt }}</p>
                         <a class="btn btn-lg btn-primary rounded" href="/alur-dan-syarat">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -325,8 +313,8 @@
                         <div class="service-icon">
                             <i class="fa fa-search text-white"></i>
                         </div>
-                        <h4 class="mb-3">Syarat Pelaporan</h4>
-                        <p class="m-0">Beberapa hal yang harus di perhatikan agar proses pelaporan berjalan dengan lancar.</p>
+                        <h4 class="mb-3">{{ $syarat->nama }}</h4>
+                        <p class="m-0">{{ $syarat->excerpt }}</p>
                         <a class="btn btn-lg btn-primary rounded" href="alur-dan-syarat">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -345,230 +333,18 @@
                 <h1 class="mb-0">Bekerja sama dengan instansi di Pemerintah Daerah Surabaya</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-                {{-- @foreach ($intansis as $instansi)
+                @foreach ( $instansis as $i )
                 <div class="testimonial-item bg-light my-4">
                     <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                         <div class="ps-4">
-                            <h4 class="text-primary mb-1">{{ $instansi->nama }}</h4>
+                            <h4 class="text-primary mb-1">{{ $i->nama }}</h4>
                         </div>
                     </div>
                     <div class="pt-4 pb-5 px-5">
-                        {{ $instansi->alamat }}
+                        {{ $i->alamat }}
                     </div>
                 </div>
-                @endforeach --}}
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Kesehatan</h4>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Jemursari No. 197 Surabaya
-                        Telp. (031) 8439473, 8439372
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Sumber Daya Air dan Bina Marga</h4>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Jimerto No. 6-8 Surabaya
-                        Telp. (031) 5343051-57
-                        Psw. 153
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Perumahan Rakyat dan Kawasan Permukiman Serta Pertanahan
-                            </h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Jimerto No. 8 Surabaya
-                        Telp. (031) 5343051-57
-                        Telp. (031) 5312144 Psw. 533
-                        Telp. (031) 5461865
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Pemadam Kebakaran dan Penyelamatan
-                            </h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Pasar Turi No. 21 Surabaya
-                        Telp. (031) 3533843
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Sosial</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Arief Rahman Hakim No. 131-133 Surabaya
-                        Telp. (031) 59174416
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Perindustrian dan Tenaga Kerja</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Tunjungan No. 1-3 (Eks. Gedung Siola)
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Pemberdayaan Perempuan dan Perlindungan Anak serta Pengendalian Penduduk dan Keluarga Berencana</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Kedungsari No. 18 Surabaya
-                        Telp. (031) 5346317 Faks (031) 5480904
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Ketahanan Pangan dan Pertanian</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Pagesangan II / No. 56 Surabaya
-                        Telp. (031) 8282328
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Lingkungan Hidup</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                    Alamat :
-                    Jalan Menur 31 A Surabaya
-                    Telp. 031-5967387
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Kependudukan dan Pencatatan Sipil</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Tunjungan No. 1-3 (Eks. Gedung Siola)
-                        Telepon : (031) 531 8916, 531 8917, 531 8835
-                        Ext. 8001,8002,8003,8004,8005,8006,8007,8008
-                        Fax : (031) 531 8856
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Perhubungan</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Dukuh Menanggal No.1 Surabaya
-                        Telp. (031) 8295335, 8295324 Psw. 10
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Komunikasi dan Informatika</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Jimerto 25-27 Lt. V Surabaya
-                        Telp. (031) 5312144 Psw. 522
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Koperasi Usaha Kecil dan Menengah dan Perdagangan</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jl. Tunjungan No. 1-3 lt.3 (ex Gedung Siola)
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Tunjungan No. 1-3 (Eks Gedung Siola)
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Kebudayaan, Kepemudaan dan Olah Raga serta Pariwisata</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Tunjungan No.1-3 (Eks. Gedung Siola)
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Dinas Perpustakaan dan Kearsipan</h4>
-
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Alamat :
-                        Jalan Dukuh Kupang Barat I / No. 1 B Surabaya
-                        Telp. (031) 5679770
-                        Jalan Rungkut Asri Tengah No. 5 - 7 Surabaya
-                        Telp. (031) 8707329
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

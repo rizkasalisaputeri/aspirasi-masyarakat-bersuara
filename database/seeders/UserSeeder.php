@@ -16,24 +16,25 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'nama_depan' => 'Rizka',
-            'nama_belakang' => 'Salisa',
+            'nama_depan' => 'admin',
+            'nama_belakang' => 'admin001',
             'asal_instansi'=> 'Unair',
-            'email' => 'rizkaunair@gmail.com',
+            'email' => 'admin@gmail.com',
+            'alamat' => 'Jl.Setro',
+            'password'=> bcrypt('admin123'),
+            'utype' => 'admin',
+        ]);
+        
+        User::create([
+            'nama_depan' => 'user',
+            'nama_belakang' => '001',
+            'asal_instansi'=> 'Unair',
+            'email' => 'user@gmail.com',
             'alamat' => 'Jl.Gebang',
-            'password'=> bcrypt('rizkacantul'),
+            'password'=> bcrypt('user123'),
             'utype' => 'user',
         ]);
 
-        User::create([
-            'nama_depan' => 'Aisha',
-            'nama_belakang' => 'Salisa',
-            'asal_instansi'=> 'Unair',
-            'email' => 'aishaunair@gmail.com',
-            'alamat' => 'Jl.Setro',
-            'password'=> bcrypt('aishacantul'),
-            'utype' => 'admin',
-        ]);
 
         // User::create([
         //     'nama_depan' => 'Putri',

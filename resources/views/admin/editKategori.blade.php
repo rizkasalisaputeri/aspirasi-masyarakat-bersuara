@@ -17,6 +17,8 @@
                                         <tr class="text-dark">
                                             <th scope="col">ID_Kategori</th>
                                             <th scope="col">Nama Kategori</th>
+                                            <th scope="col">Excerpt</th>
+                                            <th scope="col">Keterangan</th>
                                             <th colspan="2" scope="col">Action</th>
                                         </tr>
                                     </thead>
@@ -25,6 +27,8 @@
                                             <tr>
                                                 <td>{{$category->id}}</td>
                                                 <td>{{$category->nama}}</td>
+                                                <td>{{$category->excerpt}}</td>
+                                                <td>{{$category->keterangan}}</td>
                                                 <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editCategory{{$category->id}}"><i class="bi bi-pencil-square"></i></button></td>
                                                 <td><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusCategory{{$category->id}}"><i class="bi bi-trash"></i></button></td>
 

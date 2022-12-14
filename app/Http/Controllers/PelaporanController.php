@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\instansi;
 use App\Models\Pelaporan;
+use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\kategori_laporan;
@@ -20,7 +21,7 @@ class PelaporanController extends Controller
 
     public function indexAdm()
     {
-        $pelaporans = Pelaporan::with(['kategori_laporan','instansi'])->get();
+        $pelaporans = Pelaporan::with(['kategori_laporan','instansi','user'])->get();
         return view('admin.editLaporan', compact(['pelaporans']));
     }
 
@@ -33,11 +34,21 @@ class PelaporanController extends Controller
     public function updatelaporan()
     {
         Pelaporan::find(request('idlaporan'))->update([
-            'judul_laporan'=>request('judul_laporan'),
+            'status'=>request('status')
 
         ]);
         return back()->withSuccess('Laporan berhasil di update');
     }
+
+    public function updateTanggapan()
+    {
+        Pelaporan::find(request('idlaporan'))->update([
+            'tanggapan'=>request('tanggapan')
+        ]);
+        return back()->withSuccess('Tanggapan berhasil dikirim');
+    }
+
+
 
     public function create()
     {

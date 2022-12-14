@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('kategori_laporans', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->text('excerpt');
+            $table->text('keterangan');
             $table->timestamps();
         });
     }

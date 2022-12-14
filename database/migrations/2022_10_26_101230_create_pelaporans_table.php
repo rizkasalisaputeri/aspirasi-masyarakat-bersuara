@@ -21,6 +21,9 @@ return new class extends Migration
             $table->foreignId('instansi_id');
             $table->foreignId('user_id');
             $table->timestamp('tanggal')->nullable();
+            $table->tinyInteger('status')->default('1');
+            $table->string('tanggapan')->nullable();
+            // $table->tinyInteger('lampiran')->nullable();
             $table->timestamps();
         });
     }

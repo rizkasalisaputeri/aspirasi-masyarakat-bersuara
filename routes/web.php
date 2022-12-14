@@ -18,6 +18,7 @@ use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\laporanSayaController;
 use App\Http\Controllers\inputLaporanController;
 use App\Http\Controllers\SettingPelaporController;
+use App\Http\Controllers\KategoriLaporanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +30,7 @@ use App\Http\Controllers\SettingPelaporController;
 |
 */
 
+
 Route::get('/', [homeController::class,'index'])->middleware('guest');
 Route::get('/home', [homeController::class,'index'])->middleware('guest');
 Route::get('/registrasi', [homeController::class,'showRegistrasi']);
@@ -37,45 +39,11 @@ Route::get('/contact', [homeController::class,'showContact']);
 Route::get('/laporan-anggaran', [homeController::class,'showPelaporan']);
 Route::get('/laporan-proposal', [homeController::class,'showPelaporan']);
 
-// Route::get('/home', function () {
-//     return view('home');
-// });
-
-// Route::get('/home', function () {
-//     return view('home');
-// });
-
-// Route::get('/registrasi', function () {
-//     return view('regist');
-// });
-
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
-
-
-// Route::get('/laporan-anggaran', function () {
-//     return view('pelaporan');
-// });
-
-// Route::get('/laporan-proposal', function () {
-//     return view('pelaporan');
-// });
-
-
-// Route::get('/alur-dan-syarat', function () {
-//     return view('alur-dan-syarat');
-// });
-
-
 
 
 Route::get('/login', [LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class,'authenticate']);
 Route::get('/logout', [LoginController::class, "logout"])->middleware('auth');
-Route::get('/verifikasi', function () {
-    return view('verifikasi');
-});
 
 Route::get('/regist', [RegisterController::class,'index']);
 Route::post('/regist', [RegisterController::class,'store']);
@@ -99,6 +67,7 @@ Route::group(['middleware'=>['auth','ceklevel:user']],function ()
 // Route::get('/user', [PelaporController::class,'index']);
     Route::get('/settingUser', [SettingPelaporController::class,'index']);
 });
+
 //Admin
 Route::group(['middleware'=>['auth','ceklevel:admin']],function ()
 {
@@ -109,6 +78,7 @@ Route::get('/admin', [adminController::class, 'showDashAdm']);
 Route::get('/editLaporan', [PelaporanController::class, 'indexAdm']);
 Route::post('/hapus-laporan', [PelaporanController::class ,'hapuslaporan']);
 Route::post('/update-laporan', [PelaporanController::class ,'updatelaporan']);
+Route::post('/beriTanggapan', [PelaporanController::class ,'updateTanggapan']);
 
     //user
 Route::get('/editUser', [adminController::class, 'editUser']);
@@ -126,6 +96,8 @@ Route::post('/updateInstansi', [adminController::class, 'updateInstansi']);
 
     //kategori
 Route::get('/editKategori', [adminController::class, 'editKategori']);
+Route::get('/createCategory', [KategoriLaporanController::class, 'createKategori']);
+Route::post('storeKategori', [KategoriLaporanController::class,'storeKategori']);
 Route::post('/updateKategori', [adminController::class, 'updateKategori']);
 Route::post('/hapusKategori', [adminController::class, 'hapusKategori']);
 });

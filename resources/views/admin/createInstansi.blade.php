@@ -6,7 +6,7 @@
                             <h6 class="mb-4">Tambah Instansi</h6>
                             <form action="storeInstansi" method="POST">
                                 @csrf
-                            <div class="form-floating mb-3">
+                            <div class="form-flating mb-3">
                                 <input type="nama" name='nama' class="form-control" id="floatingInput"
                                     placeholder="namaInstansi">
                                 <label for="floatingInput">Nama Instansi</label>

@@ -94,16 +94,16 @@
                     <div>
                     <a class="btn btn-primary ms-4" href="/login" role="button">Login</a>
                     </div>
-                    @if(Route::has('login'))
-                    @auth
-                        @if(Auth::user()->utype=='ADM')
-                        <link rel="stylesheet" href="/admin">
-                        @else
-                        <link rel="stylesheet" href="/dashboardUser">
+                        @if(Route::has('login'))
+                            @auth
+                                @if(Auth::user()->utype=='ADM')
+                                <link rel="stylesheet" href="/admin">
+                                @else
+                                <link rel="stylesheet" href="/dashboardUser">
+                                @endif
+                            @endauth
                         @endif
-                    @endauth
-                @endif
-                </div>
+                    </div>
             </div>
         </nav>
     <div class="navbarWeb">

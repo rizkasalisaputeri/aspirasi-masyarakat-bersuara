@@ -47,7 +47,6 @@
                                     <select class="form-select"  name="kategori_id" aria-label="Default select example">
                                         @foreach ($kategori as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama }}</option>
-
                                         @endforeach
                                     </select>
 

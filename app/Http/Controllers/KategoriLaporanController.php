@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\kategori_laporan;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Storekategori_laporanRequest;
 use App\Http\Requests\Updatekategori_laporanRequest;
 
@@ -23,20 +25,27 @@ class KategoriLaporanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createKategori()
     {
-        //
+        return view('admin.createKategori');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\Storekategori_laporanRequest  $request
+     * @param  \App\Http\Requests\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Storekategori_laporanRequest $request)
+    public function storeKategori(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama'=> 'required',
+            'excerpt'=> 'nullable',
+            'keterangan'=>'nullable',
+        ]);
+        kategori_laporan::create($validatedData);
+        $request->session()->flash('success', 'Kategori berhasil ditambahkan!');
+        return redirect('/editKategori');
     }
 
     /**

@@ -3,13 +3,24 @@ namespace App\Http\Controllers;
 
 use App\Models\instansi;
 use Illuminate\Http\Request;
+use App\Models\AlurdanSyarat;
+use App\Models\kategori_laporan;
 
 class homeController extends Controller
 {
     public function index()
     {
-        $instansis = instansi::get();
-        return view('home', compact(['instansis']));
+        $alur = AlurdanSyarat::find(1);
+        $syarat = AlurdanSyarat::find(2);
+        $kat1 = kategori_laporan::find(1);
+        $kat2 = kategori_laporan::find(2);
+        return view('home', [
+            'instansis'=>instansi::all(),
+            'alur' => $alur,
+            'syarat'=> $syarat,
+            'kat1' => $kat1,
+            'kat2' => $kat2
+        ]);
     }
 
     public function showAlurdanSyarat()

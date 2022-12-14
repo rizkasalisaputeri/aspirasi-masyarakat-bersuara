@@ -15,11 +15,14 @@
                                     <thead>
                                         <tr class="text-dark">
                                             <th scope="col">ID_Laporan</th>
+                                            <th scope="col">ID_User</th>
                                             <th scope="col">Judul Laporan</th>
                                             <th scope="col">Isi Rangkuman</th>
                                             <th scope="col">Kategori Laporan</th>
                                             <th scope="col">Instansi yang dituju</th>
                                             <th scope="col">Tanggal Pelaporan</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Tanggapan Pelapor</th>
                                             <th colspan="2" scope="col">Action</th>
                                         </tr>
                                     </thead>
@@ -27,11 +30,22 @@
                                         @foreach ($pelaporans as $laporan)
                                             <tr>
                                                 <td>{{$laporan->id}}</td>
+                                                <td>{{$laporan->User->user_id}}</td>
                                                 <td>{{$laporan->judul_laporan}}</td>
                                                 <td>{{$laporan->rangkuman}}</td>
                                                 <td>{{$laporan->kategori_laporan->nama}}</td>
                                                 <td>{{$laporan->instansi->nama}}</td>
                                                 <td>{{$laporan->tanggal}}</td>
+                                                <td>
+                                                    @if($laporan->status == 1)
+                                                    <span class="btn btn-danger">Belum Diproses</span>
+                                                    @elseif($laporan->status == 2)
+                                                    <span class="btn btn-warning">Diproses</span>
+                                                    @else
+                                                    <span class="btn btn-success">Selesai</span>
+                                                    @endif
+                                                </td>
+                                                <td>{{$laporan->tanggapan}}</td>
                                                 <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editLaporan{{$laporan->id}}"><i class="bi bi-pencil-square"></i></button></td>
                                                 <td><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusLaporan{{$laporan->id}}"><i class="bi bi-trash"></i></button></td>
 
@@ -43,21 +57,21 @@
                                                     <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Laporan</h1>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="row mt-3">
-                                                                    <div class="col-sm-4"><strong>Judul laporan</strong></div>
+                                                                    <div class="col-sm-4"><strong>Status</strong></div>
                                                                     <div class="col-sm-6">
-                                                                        <input type="text" name="judul_laporan" class="form-control col-sm-12" value="{{ $laporan->judul_laporan }}" >
+                                                                        <input name="status" class="form-control col-sm-12" value="{{ $laporan->status }}" >
                                                                     </div>
                                                             </div>
 
                                                         </div>
                                                         <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn btn-primary">Understood</button>
+                                                        <button type="submit" class="btn btn-primary">Save</button>
                                                         </div>
                                                     </div>
                                                     </div>
@@ -70,7 +84,7 @@
                                                     <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Perhatian!</h1>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">

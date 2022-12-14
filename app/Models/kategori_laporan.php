@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\post;
 use App\Models\Pelaporan;
 use App\Models\laporanSaya;
 use Illuminate\Database\Eloquent\Model;
@@ -17,10 +18,15 @@ class kategori_laporan extends Model
     {
         return this->hasMany(Pelaporan::class);
     }
-    
+
     public function laporanSaya()
     {
         return this->hasMany(laporanSaya::class);
+    }
+
+    public function post()
+    {
+        return this->hasMany(post::class);
     }
 }
 

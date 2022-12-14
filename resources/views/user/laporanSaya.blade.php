@@ -46,6 +46,8 @@
                                             <th scope="col">Kategori Laporan</th>
                                             <th scope="col">Instansi yang dituju</th>
                                             <th scope="col">Tanggal Pelaporan</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Beri Tanggapan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -57,7 +59,45 @@
                                                 <td>{{$laporan->kategori_laporan->nama}}</td>
                                                 <td>{{$laporan->instansi->nama}}</td>
                                                 <td>{{$laporan->tanggal}}</td>
+                                                <td>
+                                                    @if($laporan->status == 1)
+                                                    <span class="btn btn-danger">Belum Diproses</span>
+                                                    @elseif($laporan->status == 2)
+                                                    <span class="btn btn-warning">Diproses</span>
+                                                    @else
+                                                    <span class="btn btn-success">Selesai</span>
+                                                    @endif
+                                                </td>
+                                                @if ($laporan->status == 3)
+                                                <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#beriTanggapan{{$laporan->id}}"><i class="bi bi-reply"></i></button></td>
+                                                <form action="/beriTanggapan" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" value="{{ $laporan->id }}" name="idlaporan">
+                                                <div class="modal fade" id="beriTanggapan{{$laporan->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Beri Tanggapan</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row mt-3">
+                                                                    <div class="col-sm-4"><strong>Tanggapan</strong></div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="tanggapan" class="form-control col-sm-12" value="{{ $laporan->tanggapan }}" >
+                                                                    </div>
+                                                            </div>
 
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary">Save</button>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                </form>
+                                                @endif
                                             </tr>
                                         @endforeach
                                     </tbody>

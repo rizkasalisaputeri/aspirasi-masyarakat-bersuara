@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\home;
+use App\Models\post;
 use App\Models\Pelaporan;
 use App\Models\laporanSaya;
 use Illuminate\Database\Eloquent\Model;
@@ -15,11 +17,12 @@ class instansi extends Model
 
     public function laporansaya()
     {
-        return this->hasMany(laporanSaya::class);
+        return $this->hasMany(laporanSaya::class);
     }
 
     public function Pelaporan()
     {
-        return this->hasMany(Pelaporan::class);
+        return $this->hasMany(Pelaporan::class);
     }
+
 }

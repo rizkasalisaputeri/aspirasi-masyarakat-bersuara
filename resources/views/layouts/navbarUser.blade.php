@@ -50,6 +50,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="/dashboardUser" class="nav-item nav-link">Dashboard</a>
+                    <a href="/buatLaporan" class="nav-item nav-link">Buat Laporan</a>
                     <a href="/laporanSaya" class="nav-item nav-link">Laporan Saya</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Alur dan Syarat</a>
