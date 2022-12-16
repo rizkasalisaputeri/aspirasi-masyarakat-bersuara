@@ -36,8 +36,8 @@ Route::get('/home', [homeController::class,'index'])->middleware('guest');
 Route::get('/registrasi', [homeController::class,'showRegistrasi']);
 Route::get('/alur-dan-syarat', [homeController::class,'showAlurdanSyarat']);
 Route::get('/contact', [homeController::class,'showContact']);
-Route::get('/laporan-anggaran', [homeController::class,'showPelaporan']);
-Route::get('/laporan-proposal', [homeController::class,'showPelaporan']);
+Route::get('/laporan-1', [homeController::class,'showPelaporan']);
+Route::get('/laporan-2', [homeController::class,'showPelaporan']);
 
 
 
@@ -59,7 +59,7 @@ Route::group(['middleware'=>['auth','ceklevel:user']],function ()
     //laporansaya
     Route::get('/laporanSaya', [PelaporanController::class,'index']);
     Route::get('buatLaporan', [PelaporanController::class,'create']);
-    // Route::post('storeLaporan', [PelaporanController::class, 'store']);
+    Route::post('/beriTanggapan', [PelaporanController::class ,'updateTanggapan']);
 
 
     // Route::get('create', [PelaporanController::class,'create']);
@@ -78,7 +78,6 @@ Route::get('/admin', [adminController::class, 'showDashAdm']);
 Route::get('/editLaporan', [PelaporanController::class, 'indexAdm']);
 Route::post('/hapus-laporan', [PelaporanController::class ,'hapuslaporan']);
 Route::post('/update-laporan', [PelaporanController::class ,'updatelaporan']);
-Route::post('/beriTanggapan', [PelaporanController::class ,'updateTanggapan']);
 
     //user
 Route::get('/editUser', [adminController::class, 'editUser']);

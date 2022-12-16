@@ -85,8 +85,8 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pelaporan</a>
                         <div class="dropdown-menu m-0">
-                            <a href="/laporan-proposal" class="dropdown-item">Laporan Proposal</a>
-                            <a href="/laporan-anggaran" class="dropdown-item">Laporan Anggaran</a>
+                            <a href="/laporan-1" class="dropdown-item">Aspirasi Masyarakat</a>
+                            <a href="/laporan-2" class="dropdown-item">Pengaduan Masyarakat</a>
                         </div>
                     </div>
                     <a href="/contact" class="nav-item nav-link">Contact</a>
@@ -120,12 +120,6 @@
                                 <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Home</h1>
                             </a>
                             <p class="mt-3 mb-4">Terimakasih telah mengunjungi website Masyarakat Bersuara. Silahkan daftarkan diri dan suarakan aspirasi Anda</p>
-                            <form action="">
-                                <div class="input-group">
-                                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                    <button class="btn btn-dark">Sign Up</button>
-                                </div>
-                            </form>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-6">

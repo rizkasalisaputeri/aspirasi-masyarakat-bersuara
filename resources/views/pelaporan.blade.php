@@ -39,12 +39,9 @@
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
                         <h5 class="fw-bold text-primary text-uppercase">Pelaporan</h5>
-                        <h1 class="mb-0">Laporan Proposal</h1>
+                        <h1 class="mb-0">{{ $kat1->nama }}</h1>
                     </div>
-                    <p class="mb-4">Untuk Proposal, Seseorang bisa mendaftarkan diri baik secara individu
-                        maupun kelompok untuk mengirimkan suatu proposal baik dalam
-                        bidang transportasi, lingkungan hidup, urbanisme, hak sosial, kesehatan, edukasi,
-                        maupun kebudayaan.</p>
+                    <p class="mb-4">{{ $kat1->keterangan }}</p>
                     <div class="row g-0 mb-3">
                     </div>
                 </div>
@@ -63,14 +60,9 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
-                        <h1 class="mb-0">Laporan Anggaran</h1>
+                        <h1 class="mb-0">{{ $kat2->nama }}</h1>
                     </div>
-                    <p class="mb-4">Mekanisme input partisipasi warga yang
-                        mempunyai pengaruh langsung pada keputusan anggaran. Keuntungan penggunaan
-                        input warga dalam operasional kota dapat membantu pemerintah dalam menjalankan
-                        tanggungjawabnya untuk memberikan arahan kebijakan jangka panjang. Dalam fitur
-                        ini pengguna dapat melihat rencana anggaran ataupun dana yang terpakai maka dapat
-                        diketahui transparansi dana keluar masuk oleh daerah kepada rakyat.</p>
+                    <p class="mb-4">{{$kat2->keterangan}}</p>
                     <div class="row g-0 mb-3">
                     </div>
                 </div>

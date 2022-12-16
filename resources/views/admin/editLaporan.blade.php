@@ -21,6 +21,7 @@
                                             <th scope="col">Kategori Laporan</th>
                                             <th scope="col">Instansi yang dituju</th>
                                             <th scope="col">Tanggal Pelaporan</th>
+                                            <th scope="col">Lampiran Pelaporan</th>
                                             <th scope="col">Status</th>
                                             <th scope="col">Tanggapan Pelapor</th>
                                             <th colspan="2" scope="col">Action</th>
@@ -36,13 +37,16 @@
                                                 <td>{{$laporan->kategori_laporan->nama}}</td>
                                                 <td>{{$laporan->instansi->nama}}</td>
                                                 <td>{{$laporan->tanggal}}</td>
+                                                <td align="center">
+                                                    <a href="storage/{{$laporan->lampiran_user}}"><span style="color:blue" type="button">Download</span></a>
+                                                </td>
                                                 <td>
                                                     @if($laporan->status == 1)
                                                     <span class="btn btn-danger">Belum Diproses</span>
                                                     @elseif($laporan->status == 2)
                                                     <span class="btn btn-warning">Diproses</span>
                                                     @else
-                                                    <span class="btn btn-success">Selesai</span>
+                                                    <a href="storage/{{$laporan->lampiran_adm}}"><span class="btn btn-success" type="button">Selesai</span></a>
                                                     @endif
                                                 </td>
                                                 <td>{{$laporan->tanggapan}}</td>
@@ -50,7 +54,7 @@
                                                 <td><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusLaporan{{$laporan->id}}"><i class="bi bi-trash"></i></button></td>
 
                                                 <!-- Modal -->
-                                                <form action="/update-laporan" method="POST">
+                                                <form action="/update-laporan" method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <input type="hidden" value="{{ $laporan->id }}" name="idlaporan">
                                                 <div class="modal fade" id="editLaporan{{$laporan->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -65,6 +69,16 @@
                                                                     <div class="col-sm-4"><strong>Status</strong></div>
                                                                     <div class="col-sm-6">
                                                                         <input name="status" class="form-control col-sm-12" value="{{ $laporan->status }}" >
+                                                                    </div>
+                                                                    <div class="col-sm-4"><strong>Upload Laporan</strong></div>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="hidden" name="oldImage" value="{{ $laporan->lampiran_adm }}">
+                                                                        <input class="form-control @error('lampiran_adm') is-invalid @enderror" type="file" id="lampiran_adm" name="lampiran_adm">
+                                                                        @error('lampiran_adm')
+                                                                            <div class="invalid-feedback">
+                                                                                {{ $message }}
+                                                                            </div>
+                                                                        @enderror
                                                                     </div>
                                                             </div>
 

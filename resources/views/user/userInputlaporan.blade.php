@@ -15,10 +15,10 @@
 </div>
                     <div class="col-sm-120 col-xl-60">
                         <div class="bg-light rounded h-100 p-4">
-                            <form action="/store" method="post">
+                            <form action="/store" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-floating mb-3">
-                                <input type="datetime-local" class="form-control" id="tanggal"
+                                <input type="date" class="form-control" id="tanggal"
                                     placeholder="Tanggal Laporan" name="tanggal">
                                 <label for="tanggal">Tanggal</label>
                             </div>
@@ -54,8 +54,13 @@
 
                                 </div>
                             <div class="mb-3">
-                                <label for="file" class="form-label">Upload Laporan</label>
-                                <input class="form-control" type="file" id="file" name="file">
+                                <label for="lampiran_user" class="form-label">Upload File Pendukung</label>
+                                <input class="form-control @error('lampiran_user') is-invalid @enderror" type="file" id="lampiran_user" name="lampiran_user">
+                                @error('lampiran_user')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <input type="submit" class="btn btn-primary" value="Submit">
                             </form>

@@ -20,10 +20,11 @@ return new class extends Migration
             $table->foreignId('kategori_id');
             $table->foreignId('instansi_id');
             $table->foreignId('user_id');
-            $table->timestamp('tanggal')->nullable();
+            $table->date('tanggal')->nullable();
             $table->tinyInteger('status')->default('1');
-            $table->string('tanggapan')->nullable();
-            // $table->tinyInteger('lampiran')->nullable();
+            $table->string('tanggapan')->default('-');
+            $table->string('lampiran_user')->nullable();
+            $table->string('lampiran_adm')->nullable();
             $table->timestamps();
         });
     }

@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use Carbon\Carbon;
+use App\Models\User;
 use App\Models\instansi;
 use App\Models\Pelaporan;
-use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\kategori_laporan;
@@ -31,12 +32,16 @@ class PelaporanController extends Controller
         return back()->withSuccess('Laporan berhasil dihapus');
     }
 
-    public function updatelaporan()
+    public function updatelaporan(Request $request)
     {
         Pelaporan::find(request('idlaporan'))->update([
-            'status'=>request('status')
-
+            'status'=>request('status'),
+            'lampiran_adm'=>request('lampiran_adm'),
         ]);
+
+        if($request->file('lampiran_adm')){
+            $validatedData['lampiran_adm'] = $request->file('lampiran_adm')->store('post-file');
+        }
         return back()->withSuccess('Laporan berhasil di update');
     }
 
@@ -68,8 +73,13 @@ class PelaporanController extends Controller
             'rangkuman' => 'required',
             'kategori_id' => 'required',
             'instansi_id' => 'required',
-            // 'file' => 'required|mimes:pdf'
+            'lampiran_user' => 'mimes:pdf,jpg,jpeg,png,mp4'
         ]);
+
+        if($request->file('lampiran_user')){
+            $validatedData['lampiran_user'] = $request->file('lampiran_user')->store('post-file');
+        }
+
         $validatedData['user_id'] = Auth::user()->id;
         Pelaporan::create($validatedData);
 

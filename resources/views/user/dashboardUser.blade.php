@@ -25,8 +25,8 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Today Report</p>
-                                <h6 class="mb-0">12</h6>
+                                <p class="mb-2">Total Laporan</p>
+                                <h6 class="mb-0">{{ $totalPelaporan }}</h6>
                             </div>
                         </div>
                     </div>
@@ -34,8 +34,8 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Report</p>
-                                <h6 class="mb-0">12345</h6>
+                                <p class="mb-2">Laporan Belum Diproses</p>
+                                <h6 class="mb-0">1{{ $belum }}</h6>
                             </div>
                         </div>
                     </div>
@@ -43,8 +43,8 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-area fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Report</p>
-                                <h6 class="mb-0">12345</h6>
+                                <p class="mb-2">Laporan Diproses</p>
+                                <h6 class="mb-0">{{ $diproses }}</h6>
                             </div>
                         </div>
                     </div>
@@ -52,8 +52,8 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-area fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Report</p>
-                                <h6 class="mb-0">12345</h6>
+                                <p class="mb-2">Laporan Selesai</p>
+                                <h6 class="mb-0">{{ $selesai }}</h6>
                             </div>
                         </div>
                     </div>

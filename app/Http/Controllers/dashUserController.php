@@ -17,7 +17,11 @@ class dashUserController extends Controller
     public function index()
     {
         $dtlaporan = Pelaporan::where('user_id',Auth::user()->id)->with(['kategori_laporan','instansi'])->get();
-        return view('user.dashboardUser', compact(['dtlaporan']));
+        $totalPelaporan = Pelaporan::where('user_id',Auth::user()->id)->count();
+        $belum = Pelaporan::where('user_id',Auth::user()->id.'status','1')->count();
+        $diproses = Pelaporan::where('user_id',Auth::user()->id.'status','2')->count();
+        $selesai = Pelaporan::where('user_id',Auth::user()->id.'status','3')->count();
+        return view('user.dashboardUser', compact(['dtlaporan','totalPelaporan','belum','diproses','selesai']));
     }
 
     public function userAlurdanSyarat()

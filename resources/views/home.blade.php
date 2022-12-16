@@ -85,8 +85,8 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pelaporan</a>
                         <div class="dropdown-menu m-0">
-                            <a href="/laporan-proposal" class="dropdown-item">Laporan Proposal</a>
-                            <a href="/laporan-anggaran" class="dropdown-item">Laporan Anggaran</a>
+                            <a href="/laporan-1" class="dropdown-item">Aspirasi Masyarakat</a>
+                            <a href="/laporan-2" class="dropdown-item">Pengaduan Masyarakat</a>
                         </div>
                     </div>
                     <a href="/contact" class="nav-item nav-link">Contact</a>
@@ -175,8 +175,8 @@
                             <i class="fa fa-users text-primary"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="text-white mb-0">Laporan Proposal</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
+                            <h5 class="text-white mb-0">Aspirasi Masyarakat</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">{{ $kat1Total }}</h1>
                         </div>
                     </div>
                 </div>
@@ -186,8 +186,8 @@
                             <i class="fa fa-check text-white"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="text-primary mb-0">Laporan Selesai</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">12345</h1>
+                            <h5 class="text-primary mb-0">Total Laporan</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">{{ $totalPelaporan }}</h1>
                         </div>
                     </div>
                 </div>
@@ -197,8 +197,8 @@
                             <i class="fa fa-award text-primary"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="text-white mb-0">Laporan Anggaran</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
+                            <h5 class="text-white mb-0">Pengaduan Manyarakat</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">{{ $kat2Total }}</h1>
                         </div>
                     </div>
                 </div>
@@ -252,12 +252,12 @@
                     <div class="blog-item bg-light rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Kategori Laporan</a>
+                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="/laporan-1">Laporan</a>
                         </div>
                         <div class="p-4">
                             <h4 class="mb-3">{{ $kat1->nama }}</h4>
                             <p>{{ $kat1->excerpt }}</p>
-                            <a class="text-uppercase" href="/laporan-proposal">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a class="text-uppercase" href="/laporan-1">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -270,12 +270,12 @@
                     <div class="blog-item bg-light rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/blog-3.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">Laporan</a>
+                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="laporan-2">Laporan</a>
                         </div>
                         <div class="p-4">
                             <h4 class="mb-3">{{ $kat2->nama }}</h4>
                             <p>{{ $kat2->excerpt }}</p>
-                            <a class="text-uppercase" href="/laporan-anggaran">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a class="text-uppercase" href="/laporan-2">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -360,12 +360,6 @@
                                 <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Home</h1>
                             </a>
                             <p class="mt-3 mb-4">Terimakasih telah mengunjungi website Masyarakat Bersuara. Silahkan daftarkan diri dan suarakan aspirasi Anda</p>
-                            <form action="">
-                                <div class="input-group">
-                                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                    <button class="btn btn-dark">Sign Up</button>
-                                </div>
-                            </form>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-6">

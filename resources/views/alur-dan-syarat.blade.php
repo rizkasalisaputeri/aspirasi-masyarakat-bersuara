@@ -44,16 +44,7 @@
                                 <i class="fa fa-cubes text-white"></i>
                             </div>
                             <h4>Alur Pelaporan</h4>
-                            <p class="mb-0">1.	Buat dan kirim surat pengaduan online pada web Masyarakat Bersuara. </p>
-                            <p class="mb-0">2.	Surat pengaduan dianalisis sesuai masalah, kemudian diberikan saran untuk diteruskan ke Badan sesuai bidang permasalahan.</p>
-                            <p class="mb-0">3.	Materi dikoreksi dan redaksi hasil analisis permasalahan disempurnakan. </p>
-                            <p class="mb-0">4.	Hasil analisis permasalahan disetujui. </p>
-                            <p class="mb-0">5.	Nota dinas dan surat web dibuat. </p>
-                            <p class="mb-0">6.	Paraf hasil analisis diberikan dan dikoreksi. Kemudian dibuatkan Salinan untuk diteruskan. </p>
-                            <p class="mb-0">7.	Salinan disahkan oleh Deputi dan diteruskan ke pimpinan DPRD. </p>
-                            <p class="mb-0">8.	Pimpinan DPRD menerima hasil analisis. </p>
-                            <p class="mb-0">9.	PU membuat dokumentasi dan jawaban untuk pengadu. </p>
-                                </p>
+                            <p class="mb-0">{{ $alur->keterangan}} </p>
                         </div>
                     </div>
                 </div>
@@ -70,12 +61,7 @@
                             </div>
                             <h4>Syarat Pelaporan</h4>
                             <p class="mb-0">Beberapa hal yang harus di perhatikan agar pengaduan Anda dapat diproses lebih lanjut :</p>
-                            <p class="mb-0">1. Laporan  memuat identitas dan alamat pengiirm yang jelas dan lengkap</p>
-                            <p class="mb-0">2. Laporan memuat maksud dan tujuan yang jelas</p>
-                            <p class="mb-0">3. Substansi permasalahan yang disampaikan jelas</p>
-                            <p class="mb-0">4. Masalah yang disampaikan memerlukan penyelesaian atau respon</p>
-                            <p class="mb-0">5. Data pendukung disampaikan secara lengkap dan akurat</p>
-                            <p class="mb-0">6. Ditambahkan dengan tanda tangan pengadu/cap jempol pengadu</p>
+                            <p class="mb-0">{{ $syarat->keterangan }}</p>
                         </div>
                     </div>
                 </div>

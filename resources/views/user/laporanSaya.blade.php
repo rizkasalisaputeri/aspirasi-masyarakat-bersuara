@@ -34,7 +34,6 @@
                     <div class="container-fluid pt-4 px-4">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                               {{-- <a> href="createUser" class="btn btn-primary">Tambah User</a> --}}
                             </div>
                             <div class="table-responsive">
                                 <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -46,8 +45,9 @@
                                             <th scope="col">Kategori Laporan</th>
                                             <th scope="col">Instansi yang dituju</th>
                                             <th scope="col">Tanggal Pelaporan</th>
+                                            <th scope="col">Lampiran Pelaporan</th>
                                             <th scope="col">Status</th>
-                                            <th scope="col">Beri Tanggapan</th>
+                                            <th colspan="2" scope="col">Beri Tanggapan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -59,17 +59,21 @@
                                                 <td>{{$laporan->kategori_laporan->nama}}</td>
                                                 <td>{{$laporan->instansi->nama}}</td>
                                                 <td>{{$laporan->tanggal}}</td>
+                                                <td align="center">
+                                                    <a href="storage/{{$laporan->lampiran_user}}"><span style="color:blue" type="button">Download</span></a>
+                                                </td>
                                                 <td>
                                                     @if($laporan->status == 1)
                                                     <span class="btn btn-danger">Belum Diproses</span>
                                                     @elseif($laporan->status == 2)
                                                     <span class="btn btn-warning">Diproses</span>
                                                     @else
-                                                    <span class="btn btn-success">Selesai</span>
+                                                    <a href="{{ asset('storage/'.$laporan->lampiran_adm) }}"><span class="btn btn-success" type="button">Selesai</span>
                                                     @endif
                                                 </td>
                                                 @if ($laporan->status == 3)
-                                                <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#beriTanggapan{{$laporan->id}}"><i class="bi bi-reply"></i></button></td>
+                                                <td align='justify'>{{$laporan->tanggapan}}</td>
+                                                <td align='center'><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#beriTanggapan{{$laporan->id}}"><i class="bi bi-reply"></i></button></td>
                                                 <form action="/beriTanggapan" method="POST">
                                                     @csrf
                                                     <input type="hidden" value="{{ $laporan->id }}" name="idlaporan">
@@ -84,7 +88,7 @@
                                                             <div class="row mt-3">
                                                                     <div class="col-sm-4"><strong>Tanggapan</strong></div>
                                                                     <div class="col-sm-6">
-                                                                        <input name="tanggapan" class="form-control col-sm-12" value="{{ $laporan->tanggapan }}" >
+                                                                        <input type="text" name="tanggapan" class="form-control col-sm-12" value="{{ $laporan->tanggapan }}" >
                                                                     </div>
                                                             </div>
 
